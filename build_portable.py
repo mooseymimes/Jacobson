@@ -23,6 +23,7 @@ PAGES = [
     ("index.html", "home"),
     ("about.html", "about"),
     ("teaching.html", "teaching"),
+    ("econ101-syllabus.html", "econ101"),
     ("contact.html", "contact"),
     ("dissertation/index.html", "dissertation"),
     ("dissertation/growth.html", "growth"),
@@ -118,6 +119,7 @@ def main():
         nav_page[r] = "dissertation"
     nav_page["adryn"] = "articles"
     nav_page["adryn2"] = "articles"
+    nav_page["econ101"] = "teaching"
 
     page = f"""<!DOCTYPE html>
 <html lang="en">
