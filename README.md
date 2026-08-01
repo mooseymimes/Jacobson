@@ -27,8 +27,24 @@ assets/
 
 Every section is its own page, so any card/subcategory can be expanded into
 further pages without touching the rest of the site. No build step, no
-dependencies — open `index.html` in any browser (works on mobile) or serve
-with any static host (e.g. GitHub Pages).
+dependencies — serve with any static host (e.g. GitHub Pages) or open
+`index.html` in a desktop browser.
+
+## Opening on a phone (portable.html)
+
+Android opens files from storage as `content://` URIs and only grants the
+browser access to that single file — sibling CSS/JS/images and links to other
+pages won't load. For that case use **`portable.html`**: a single
+self-contained build (inlined styles, embedded images, hash-based section
+navigation). Download just that one file to your phone and open it.
+
+Regenerate it after editing the site:
+
+```
+python3 build_portable.py
+```
+
+The modular pages remain the source of truth; `portable.html` is generated.
 
 ## Local preview
 
@@ -36,3 +52,9 @@ with any static host (e.g. GitHub Pages).
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```
+
+## Hosting note
+
+For the full multi-page experience on mobile, host the repo (e.g. enable
+GitHub Pages in the repository settings) and visit the URL — no workaround
+needed then.
