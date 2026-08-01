@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No. 004 — Desk Rejection of “HW2” | Dr. Paul Jacobson</title>
+  <meta name="description" content="Dr. Paul Jacobson's desk rejection of a second manuscript from one Adryn Smith, comprising a salutation, a non-binding price floor, a poem, and an internship at a firm that does not exist.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style class="article-style">
+  /* ============================================================
+     Article No. 004 — "Desk Rejection Memo" design.
+     Departmental letterhead, a typed editorial memorandum, one
+     rubber stamp, and the doctor's red pen (refilled since 001).
+     Classes are prefixed .aj4- to keep this article's quirk from
+     leaking into the rest of the site.
+     ============================================================ */
+  .aj4-memo {
+    background: #fffdf6;
+    border: 1px solid #d8d2c0;
+    border-radius: 3px;
+    box-shadow: 0 6px 24px rgba(22, 20, 44, 0.18);
+    position: relative;
+    padding: 0 0 2.5rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+  }
+  .aj4-letterhead {
+    border-bottom: 3px double var(--ink);
+    padding: 1.6rem 2rem 1rem;
+    text-align: center;
+  }
+  .aj4-letterhead h1 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .aj4-letterhead p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.3rem 0 0;
+  }
+  .aj4-body {
+    font-family: "Courier New", Courier, monospace;
+    color: #2b2a33;
+    padding: 1.8rem 2rem 0;
+    line-height: 1.7;
+  }
+  .aj4-body h2 {
+    font-size: 1rem;
+    margin: 1.6rem 0 0.6rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .aj4-body p, .aj4-body li { font-size: 0.95rem; margin: 0 0 1rem; }
+  .aj4-body ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+  .aj4-meta {
+    font-size: 0.85rem;
+    border: 1px solid #d8d2c0;
+    background: #fff;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.4rem;
+  }
+  .aj4-red {
+    font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
+    color: #c92a2a;
+  }
+  .aj4-note {
+    display: block;
+    transform: rotate(-1deg);
+    font-size: 1.02rem;
+    margin: -0.3rem 0 1.1rem;
+  }
+  .aj4-grade {
+    position: absolute;
+    top: 1rem; right: 1.1rem;
+    font-family: "Bradley Hand", "Segoe Script", "Comic Sans MS", cursive;
+    font-size: 2.4rem;
+    color: #c92a2a;
+    border: 4px solid #c92a2a;
+    border-radius: 50%;
+    width: 4.6rem; height: 4.6rem;
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(-7deg);
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+  }
+  .aj4-stamp {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #b02121;
+    border: 3px double #b02121;
+    padding: 0.4rem 1rem;
+    transform: rotate(-3deg);
+    margin: 0 0 1.4rem;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .aj4-exhibit {
+    border: 1px solid #d8d2c0;
+    background: #fff;
+    padding: 0.7rem;
+    margin: 0 2rem 1.4rem;
+    box-shadow: 0 3px 12px rgba(22, 20, 44, 0.15);
+    transform: rotate(-0.6deg);
+    position: relative;
+  }
+  .aj4-exhibit::before, .aj4-exhibit::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 74px; height: 22px;
+    background: rgba(246, 236, 190, 0.85);
+    border: 1px solid rgba(180, 165, 110, 0.4);
+    transform: rotate(-4deg);
+  }
+  .aj4-exhibit::before { left: 8%; }
+  .aj4-exhibit::after { right: 8%; transform: rotate(5deg); }
+  .aj4-exhibit img { border-radius: 3px; }
+  .aj4-exhibit figcaption {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.8rem;
+    color: #6b6879;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  .aj4-math {
+    font-family: "Courier New", Courier, monospace;
+    background: #fff;
+    border: 1px dashed #b7b0a0;
+    padding: 0.4rem 0.8rem;
+    display: inline-block;
+  }
+  .aj4-verse {
+    font-family: "Courier New", Courier, monospace;
+    border-left: 3px solid #d8d2c0;
+    margin: 0 0 1rem;
+    padding: 0.2rem 0 0.2rem 1rem;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 480px) {
+    .aj4-body { padding: 1.4rem 1.1rem 0; }
+    .aj4-exhibit { margin: 0 1.1rem 1.4rem; }
+    .aj4-grade { font-size: 1.9rem; width: 3.6rem; height: 3.6rem; }
+  }
+  </style>
+</head>
+<body data-page="articles">
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="../index.html">Dr. Paul Jacobson<small>Department of Economics</small></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-page="home" href="../index.html">Home</a></li>
+          <li><a data-page="about" href="../about.html">About</a></li>
+          <li><a data-page="dissertation" href="../dissertation/index.html">The Dissertation</a></li>
+          <li><a data-page="articles" href="index.html">Scholarly Articles</a></li>
+          <li><a data-page="teaching" href="../teaching.html">Teaching</a></li>
+          <li><a data-page="contact" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page page-narrow">
+    <p class="crumbs"><a href="index.html">Scholarly Articles</a> / No. 004</p>
+    <p class="eyebrow">Article No. 004 &middot; Peer Review Division &middot; Second Round</p>
+    <h2 class="section-title">Desk Rejection of a Manuscript Entitled &ldquo;HW2&rdquo;</h2>
+
+    <div class="aj4-memo">
+      <div class="aj4-grade">F+</div>
+
+      <div class="aj4-letterhead">
+        <h1>The Journal of Jacobson Studies</h1>
+        <p>Office of the Editor-in-Chief, Managing Editor, and Sole Referee (same office)</p>
+      </div>
+
+      <div class="aj4-body">
+        <p class="aj4-meta">
+          MANUSCRIPT NO: 004 (the author's second attempt; the Journal's 001 refers)<br>
+          TITLE: &ldquo;HW2&rdquo;<br>
+          AUTHOR: Smith, Adryn (LinkedIn influencer, self-reported)<br>
+          DATE OF SUBMISSION: &ldquo;9/11/LOL,&rdquo; a calendar unknown to this office<br>
+          ADDRESSEE: &ldquo;Dr. Shit&rdquo; &mdash; forwarded to me, as no such faculty member exists<br>
+          RECOMMENDATION: See stamp.
+        </p>
+
+        <span class="aj4-stamp">Desk Reject &mdash; Without Prejudice (Some Prejudice)</span>
+
+        <h2>1. Editorial Preamble</h2>
+        <p>
+          The author has cited this Journal (&ldquo;saw the post on your site&rdquo;),
+          making them, by citation count, my most engaged reader. The manuscript
+          opens by addressing me under a name I do not hold, dated in a format
+          that ends in &ldquo;LOL.&rdquo; The Journal notes that the author cannot
+          yet be trusted with either of the two fields at the top of a page and
+          proceeds, with lowered expectations, to the content.
+        </p>
+        <span class="aj4-red aj4-note">Salutation docked one letter grade. The date docked another. You began this paper at a C. &mdash;PJ</span>
+
+        <h2>2. Career Announcements (Unrefereed)</h2>
+        <ol>
+          <li>
+            <strong>The internship.</strong> The author reports applying to
+            &ldquo;KPNG,&rdquo; an entity unknown to the Big Four, the Big Three,
+            or the alphabet. If the author means KPMG, the application materials
+            presumably spell it the same way, in which case the author's
+            confidence in &ldquo;big bucks&rdquo; is the only thing in this
+            manuscript not at risk of being accepted.
+          </li>
+          <li>
+            <strong>The reference.</strong> The author writes, verbatim,
+            &ldquo;please lemme know if u would like a reference.&rdquo; As
+            drafted, the author is offering to serve as a reference for me.
+            I accept. Kindly inform KPNG that I am diligent, punctual, and the
+            author's professor, a fact the author may wish to reflect on before
+            listing me in return.
+          </li>
+          <li>
+            <strong>The LinkedIn.</strong> The author invites me to follow
+            &ldquo;@AdrynSmith$$,&rdquo; where they post &ldquo;career
+            development content that could be of use to you.&rdquo; The Journal
+            reminds the author that tenure is the original passive income and
+            declines to engage with the platform where finance majors go to
+            congratulate each other for commuting.
+          </li>
+        </ol>
+        <span class="aj4-red aj4-note">Two dollar signs in the handle. One for each week the &ldquo;influencing&rdquo; will support you. &mdash;PJ</span>
+
+        <h2>3. The Exhibit</h2>
+        <p>The homework proper &mdash; the author announces &ldquo;HW starts
+        now,&rdquo; a sentence that doubles as a warning &mdash; is reproduced
+        below, unretouched, for the permanent record.</p>
+      </div>
+
+      <figure class="aj4-exhibit">
+        <img src="../assets/img/adryn-homework-2.jpg"
+             alt="Handwritten homework from Adryn Smith addressed to 'Dr. Shit', with supply and demand graphs for a price floor, a hand-drawn game tree, a five-line poem about Dr. Jacobson, and a stick figure in a KPNG top hat next to a Tesla">
+        <figcaption>Exhibit B. The manuscript, as received. The stick figure in
+        the top hat is, per the author's own caption, the author.</figcaption>
+      </figure>
+
+      <div class="aj4-body">
+        <h2>4. Review of the Technical Content (Both of It)</h2>
+        <ol>
+          <li>
+            <strong>Question 1, &ldquo;Price floor.&rdquo;</strong> The author
+            draws a price floor <em>below</em> the market equilibrium. A floor
+            set below equilibrium is non-binding: the market clears above it and
+            precisely nothing happens, which does make this the rare graph in
+            the author's oeuvre whose predictions are correct. The consumer and
+            producer surplus labels are carried over from the first panel
+            unchanged &mdash; accurate here only by accident, since a floor that
+            binds would transfer surplus to sellers and produce a deadweight
+            loss the author has never drawn nor, on the evidence, met. Full
+            marks for supply sloping up. That is the full extent of the full marks.
+          </li>
+          <li>
+            <strong>Question 2, &ldquo;Game theor Practice.&rdquo;</strong> The
+            author presents a game tree with no players, no strategies, and no
+            indication of who moves at which node, then circles the payoff
+            &ldquo;16&rdquo; &mdash; the largest number on the page. This is not
+            backward induction; it is shopping. In an actual extensive-form
+            game the solution is found by working from the terminal nodes up,
+            <span class="aj4-math">anticipating each player's best response</span>,
+            not by awarding the pot to whoever the artist likes. The tree also
+            appears to double as a stick figure, which at least gives one of
+            the two players a face.
+          </li>
+          <li>
+            <strong>The verse.</strong> The manuscript includes a five-line poem,
+            reproduced here under fair use, as no one would pay for it:
+            <div class="aj4-verse">
+              I am Dr. Jacobson<br>
+              To me making $ is a sin<br>
+              Adryn will always win<br>
+              Cuz my major is Fin<br>
+              Poorness goes into the Bin
+            </div>
+            The Journal notes that the poem is written in my voice for two lines
+            and the author's for three, a point-of-view error that would concern
+            me more if either voice scanned. &ldquo;Jacobson&rdquo; does not
+            rhyme with &ldquo;sin.&rdquo; The author's major does not rhyme with
+            solvency.
+          </li>
+          <li>
+            <strong>The illustration.</strong> The manuscript closes with the
+            author rendered post-KPNG: top hat, monocle, Tesla, and an annotated
+            &ldquo;$10,000 watch.&rdquo; The Journal observes that the author has
+            drawn the compensation package of a managing partner and labeled it
+            &ldquo;intern.&rdquo; This is the largest forecasting error in the
+            document, and the document contains a price floor drawn underwater.
+          </li>
+        </ol>
+        <span class="aj4-red aj4-note">You drew the watch larger than the Tesla. Even your delusions have relative prices. &mdash;PJ</span>
+
+        <h2>5. Verdict</h2>
+        <p>
+          The grade of F+ is recorded above. The author should not mistake this
+          for grade inflation: it is one increment above the prior submission's
+          F&minus;, and at this rate of convergence the author will reach a
+          passing grade shortly after tenure review &mdash; mine, not theirs,
+          as only one of us is on that track. The manuscript is rejected at the
+          desk, the desk having read quite enough. Office hours remain Tuesdays,
+          2:00&ndash;2:15 PM, where we will cover binding price floors, backward
+          induction, and the spelling of accounting firms, in whatever order
+          time permits, which is to say one of them.
+        </p>
+        <span class="aj4-red aj4-note">Growth rate noted: F&minus; to F+ in one semester. See me before you annualize it. &mdash;PJ</span>
+      </div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="adryn-smith-response.html">&larr; No. 001: The First Report</a>
+      <a href="../contact.html">Attend Office Hours &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>&copy; Dr. Paul Jacobson. All insights reserved.</span>
+      <span><a href="../dissertation/index.html">The Dissertation</a> &middot; <a href="../contact.html">Contact</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

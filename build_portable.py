@@ -33,6 +33,7 @@ PAGES = [
     ("dissertation/bibliography.html", "bibliography"),
     ("articles/index.html", "articles"),
     ("articles/adryn-smith-response.html", "adryn"),
+    ("articles/adryn-smith-hw2.html", "adryn2"),
 ]
 
 # filename -> route, used when rewriting hrefs
@@ -116,6 +117,7 @@ def main():
     for r in ("growth", "education", "society", "sectors", "convergence", "bibliography"):
         nav_page[r] = "dissertation"
     nav_page["adryn"] = "articles"
+    nav_page["adryn2"] = "articles"
 
     page = f"""<!DOCTYPE html>
 <html lang="en">
