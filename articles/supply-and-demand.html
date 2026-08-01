@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No. 005 — The Scissors, Sharpened: Supply and Demand | Dr. Paul Jacobson</title>
+  <meta name="description" content="Dr. Paul Jacobson takes up the chalk personally and settles supply and demand on the first blackboard in history to obey its lecturer.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style class="article-style">
+  /* ============================================================
+     Article No. 005 — "Blackboard Lecture" design.
+     A wood-framed slate board, chalk in four colors, a working
+     chalk tray, and the first interactive blackboard in the
+     history of chalk. Classes prefixed .aj5- to keep the dust
+     off the rest of the site.
+     ============================================================ */
+  .aj5-frame {
+    background: linear-gradient(175deg, #a9752f, #8a5a22 60%, #6f4718);
+    padding: 12px 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(22, 20, 44, 0.35);
+    margin-top: 1.5rem;
+  }
+  .aj5-board {
+    background:
+      radial-gradient(ellipse at 18% 25%, rgba(255,255,255,0.055), transparent 42%),
+      radial-gradient(ellipse at 78% 65%, rgba(255,255,255,0.04), transparent 38%),
+      radial-gradient(ellipse at 45% 90%, rgba(255,255,255,0.03), transparent 30%),
+      #2c3b34;
+    border-radius: 6px;
+    border: 1px solid #1e2a25;
+    padding: 1.7rem 1.3rem 2.1rem;
+    color: #f4f1e8;
+    font-family: "Chalkboard SE", "Segoe Print", "Comic Sans MS", cursive;
+    line-height: 1.75;
+  }
+  .aj5-board a { color: #bcd9f7; }
+  .aj5-title {
+    text-align: center;
+    color: #f7e8a4;
+    font-size: 1.45rem;
+    line-height: 1.35;
+    margin: 0 auto 0.4rem;
+    max-width: 34rem;
+    transform: rotate(-0.4deg);
+  }
+  .aj5-title-rule {
+    width: 60%;
+    max-width: 20rem;
+    height: 3px;
+    margin: 0 auto 1.6rem;
+    background: rgba(247, 232, 164, 0.65);
+    border-radius: 999px;
+    transform: rotate(0.5deg);
+  }
+  .aj5-byline {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cfc9b8;
+    margin: -1rem 0 1.6rem;
+  }
+  .aj5-h {
+    color: #f7e8a4;
+    font-size: 1.08rem;
+    letter-spacing: 0.03em;
+    margin: 1.9rem 0 0.6rem;
+    border-bottom: 2px dashed rgba(244, 241, 232, 0.45);
+    display: inline-block;
+    padding-bottom: 0.1rem;
+    transform: rotate(-0.3deg);
+  }
+  .aj5-board p { margin: 0 0 1rem; font-size: 0.97rem; }
+  .aj5-law {
+    border: 2px dashed rgba(244, 241, 232, 0.55);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin: 0 0 1rem;
+    background: rgba(255, 255, 255, 0.035);
+    transform: rotate(-0.35deg);
+    font-size: 0.97rem;
+  }
+  .aj5-law em { color: #f2c4d6; font-style: normal; }
+  .aj5-yellow { color: #f7e8a4; }
+  .aj5-blue { color: #bcd9f7; }
+  .aj5-pink { color: #f2c4d6; }
+  .aj5-aside {
+    font-size: 0.82rem;
+    color: #cfc9b8;
+    transform: rotate(0.4deg);
+    margin: -0.4rem 0 1rem;
+  }
+  .aj5-fig { margin: 1.2rem auto 0.6rem; max-width: 560px; }
+  .aj5-fig svg { width: 100%; height: auto; display: block; }
+  .aj5-controls {
+    max-width: 560px;
+    margin: 0.6rem auto 0;
+    display: grid;
+    gap: 0.35rem 1rem;
+    grid-template-columns: 1fr;
+    font-size: 0.9rem;
+  }
+  @media (min-width: 560px) { .aj5-controls { grid-template-columns: 1fr 1fr; } }
+  .aj5-controls label { display: block; }
+  .aj5-controls input[type="range"] {
+    width: 100%;
+    accent-color: #f7e8a4;
+    cursor: pointer;
+  }
+  .aj5-readout {
+    max-width: 560px;
+    margin: 0.9rem auto 0;
+    border: 2px solid rgba(247, 232, 164, 0.6);
+    border-radius: 8px;
+    padding: 0.55rem 0.9rem;
+    color: #f7e8a4;
+    font-size: 0.92rem;
+    transform: rotate(-0.25deg);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .aj5-verdict {
+    max-width: 560px;
+    margin: 0.6rem auto 0;
+    font-size: 0.88rem;
+    color: #f2c4d6;
+    transform: rotate(0.3deg);
+    min-height: 2.4em;
+  }
+  .aj5-eraser-btn {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: #2c3b34;
+    background: linear-gradient(#f0ece0, #cfc9b8);
+    border: 1px solid #9a937f;
+    border-bottom-width: 5px;
+    border-radius: 4px;
+    padding: 0.35rem 1rem;
+    cursor: pointer;
+  }
+  .aj5-eraser-btn:active { border-bottom-width: 2px; transform: translateY(2px); }
+  .aj5-errors { padding-left: 1.3rem; margin: 0 0 1rem; }
+  .aj5-errors li { margin-bottom: 0.75rem; font-size: 0.95rem; }
+  .aj5-tray {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1rem 0.6rem;
+    margin-top: 0;
+  }
+  .aj5-stick {
+    width: 2.4rem;
+    height: 0.55rem;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+  }
+  .aj5-stick.white { background: #f4f1e8; }
+  .aj5-stick.yellow { background: #f7e8a4; }
+  .aj5-stick.blue { background: #bcd9f7; }
+  .aj5-stick.pink { background: #f2c4d6; width: 1.3rem; }
+  .aj5-tray-eraser {
+    margin-left: auto;
+    width: 4rem;
+    height: 1.1rem;
+    border-radius: 3px;
+    background: linear-gradient(#4a4438 45%, #f0ece0 45%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  </style>
+</head>
+<body data-page="articles">
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="../index.html">Dr. Paul Jacobson<small>Department of Economics</small></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-page="home" href="../index.html">Home</a></li>
+          <li><a data-page="about" href="../about.html">About</a></li>
+          <li><a data-page="dissertation" href="../dissertation/index.html">The Dissertation</a></li>
+          <li><a data-page="articles" href="index.html">Scholarly Articles</a></li>
+          <li><a data-page="teaching" href="../teaching.html">Teaching</a></li>
+          <li><a data-page="contact" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page page-narrow">
+    <p class="crumbs"><a href="index.html">Scholarly Articles</a> / No. 005</p>
+    <p class="eyebrow">Article No. 005 &middot; Public Instruction Division</p>
+    <h2 class="section-title">The Scissors, Sharpened: Supply and Demand, Explained Once and For All</h2>
+
+    <div class="prose">
+      <p>
+        The department requested that Dr. Jacobson &ldquo;make the material more
+        accessible.&rdquo; He has responded in the only acceptable manner: by taking
+        up the chalk personally. What follows is the lecture as delivered &mdash;
+        from memory, without notes, to sustained applause (attested: the janitor)
+        &mdash; preserved on the first blackboard in the history of chalk to obey
+        its lecturer.
+      </p>
+    </div>
+
+    <div class="aj5-frame">
+      <div class="aj5-board">
+        <h1 class="aj5-title">Supply &amp; Demand: The Complete Theory, in One Sitting</h1>
+        <div class="aj5-title-rule"></div>
+        <p class="aj5-byline">P. Jacobson, Dr. &mdash; chalk his own &mdash; erasure forbidden</p>
+
+        <h2 class="aj5-h">I. The Law of Demand</h2>
+        <p class="aj5-law">As the price of a good rises, the quantity demanded falls.
+        <em>People buy less of what costs more.</em></p>
+        <p>
+          Students find this law intuitive right up until they are asked to draw it,
+          at which point the axes are swapped, the curve slopes upward, and someone
+          writes <span class="aj5-blue">&ldquo;inverted Keynesian&rdquo;</span> in the
+          margin. Note the convention: price on the vertical axis. We owe this to
+          Marshall, and undergraduates protest it annually as though discovering
+          injustice itself. The convention stands. So does the law.
+        </p>
+
+        <h2 class="aj5-h">II. The Law of Supply</h2>
+        <p class="aj5-law">As the price of a good rises, the quantity supplied rises.
+        <em>Sellers offer more of what pays more.</em></p>
+        <p>
+          This is not greed; it is arithmetic wearing greed's coat. At a higher
+          price, production that was yesterday a folly is today a business. The
+          <span class="aj5-blue">supply curve</span> slopes upward for the same
+          reason my office hours are fifteen minutes: scarce resources flow to
+          their highest-valued use.
+        </p>
+
+        <h2 class="aj5-h">III. Equilibrium, or The Scissors</h2>
+        <p>
+          Which determines price &mdash; supply, or demand? The question is asked
+          every September and deserves Marshall's answer: one may as reasonably ask
+          which blade of a pair of scissors cuts the cloth. The curves cross;
+          the market clears; the price at the crossing is
+          <span class="aj5-pink">P*</span>, the quantity
+          <span class="aj5-pink">Q*</span>. Above P*, unsold surplus embarrasses
+          the sellers; below it, shortage embarrasses everyone. The market, unlike
+          the student, corrects itself without being told twice.
+        </p>
+
+        <h2 class="aj5-h">IV. The Apparatus</h2>
+        <p>
+          Behold: the diagram, alive. No other blackboard has achieved this. Drag
+          the chalk below to shift the curves and observe equilibrium recompute
+          itself &mdash; instantly, obediently, and to seven decimal places, which
+          is the minimum courtesy owed to posterity.
+        </p>
+
+        <figure class="aj5-fig">
+          <svg viewBox="0 0 400 290" role="img" aria-label="Interactive supply and demand diagram with adjustable curves"
+               font-family="Chalkboard SE, Segoe Print, Comic Sans MS, cursive">
+            <defs>
+              <clipPath id="aj5-plot"><rect x="46" y="12" width="312" height="246"></rect></clipPath>
+            </defs>
+            <!-- axes -->
+            <line x1="46" y1="258" x2="368" y2="258" stroke="#f4f1e8" stroke-width="2.5" stroke-linecap="round"></line>
+            <line x1="46" y1="258" x2="46" y2="12" stroke="#f4f1e8" stroke-width="2.5" stroke-linecap="round"></line>
+            <text x="34" y="22" fill="#f4f1e8" font-size="15">P</text>
+            <text x="372" y="263" fill="#f4f1e8" font-size="15">Q</text>
+            <text x="40" y="274" fill="#f4f1e8" font-size="13">0</text>
+            <g clip-path="url(#aj5-plot)">
+              <line id="aj5-dline" stroke="#f7e8a4" stroke-width="3" stroke-linecap="round"></line>
+              <line id="aj5-sline" stroke="#bcd9f7" stroke-width="3" stroke-linecap="round"></line>
+              <line id="aj5-eqh" stroke="#f2c4d6" stroke-width="1.6" stroke-dasharray="5 6"></line>
+              <line id="aj5-eqv" stroke="#f2c4d6" stroke-width="1.6" stroke-dasharray="5 6"></line>
+              <circle id="aj5-eqdot" r="5" fill="#f2c4d6"></circle>
+            </g>
+            <text id="aj5-dlabel" fill="#f7e8a4" font-size="15">D</text>
+            <text id="aj5-slabel" fill="#bcd9f7" font-size="15">S</text>
+            <text id="aj5-plabel" fill="#f2c4d6" font-size="12" text-anchor="end">P*</text>
+            <text id="aj5-qlabel" fill="#f2c4d6" font-size="12" text-anchor="middle" y="274">Q*</text>
+          </svg>
+        </figure>
+
+        <div class="aj5-controls">
+          <label>Shift <span class="aj5-yellow">Demand</span> (tastes, income, hype)
+            <input type="range" id="aj5-d" min="-3" max="3" step="0.1" value="0" aria-label="Shift the demand curve">
+          </label>
+          <label>Shift <span class="aj5-blue">Supply</span> (costs, weather, taxes)
+            <input type="range" id="aj5-s" min="-3" max="3" step="0.1" value="0" aria-label="Shift the supply curve">
+          </label>
+        </div>
+        <div class="aj5-readout" id="aj5-readout"></div>
+        <p class="aj5-verdict" id="aj5-verdict"></p>
+        <button type="button" class="aj5-eraser-btn" id="aj5-reset">Erase &amp; restore equilibrium</button>
+        <p class="aj5-aside">The board recomputes without complaint. Certain students could learn from it.</p>
+
+        <h2 class="aj5-h">V. Common Errors of the Undergraduate Mind</h2>
+        <ol class="aj5-errors">
+          <li>
+            <span class="aj5-yellow">Confusing movement along a curve with a shift
+            of the curve.</span> A price change moves you <em>along</em> demand; it
+            does not move demand. This is the cardinal sin, and it is committed
+            hourly.
+          </li>
+          <li>
+            <span class="aj5-yellow">Circling the intersection and calling it
+            solved.</span> The intersection is <em>found</em>, by algebra, not
+            <em>elected</em>, by pen. Circling the biggest number is not a method
+            in this course, nor &mdash; as the literature
+            <a href="adryn-smith-hw2.html">now records</a> &mdash; in game theory.
+          </li>
+          <li>
+            <span class="aj5-yellow">The non-binding price control.</span> A price
+            floor set <em>below</em> P* binds nothing except, eventually, the
+            student's grade. The apparatus above will happily demonstrate; the
+            <a href="adryn-smith-hw2.html">desk-rejected manuscript of record</a>
+            demonstrates harder.
+          </li>
+        </ol>
+
+        <h2 class="aj5-h">VI. Concluding Remark</h2>
+        <p>
+          Supply and demand are not opinions in tension; they are one machine seen
+          from its two sides. The reader who has followed this lecture now
+          understands price. The reader who has not is invited to read it again
+          &mdash; the price of doing so has never been lower, and by the reader's
+          own new theory, quantity demanded should respond accordingly.
+        </p>
+        <p>
+          Homework: <a href="../econ101-syllabus.html">Problem Set 1, ECON 101</a>.
+          Seven decimal places. You know why.
+        </p>
+      </div>
+      <div class="aj5-tray">
+        <span class="aj5-stick white"></span>
+        <span class="aj5-stick yellow"></span>
+        <span class="aj5-stick blue"></span>
+        <span class="aj5-stick pink"></span>
+        <span class="aj5-tray-eraser"></span>
+      </div>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="index.html">&larr; Back to the Archive</a>
+      <a href="../econ101-syllabus.html">Enroll in ECON 101 &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>&copy; Dr. Paul Jacobson. All insights reserved.</span>
+      <span><a href="../dissertation/index.html">The Dissertation</a> &middot; <a href="../contact.html">Contact</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+  (function () {
+    var dEl = document.getElementById("aj5-d");
+    var sEl = document.getElementById("aj5-s");
+    if (!dEl || !sEl) return;
+    var B = 0.75, D = 0.75; // slopes: demand P = A - B*Q, supply P = C + D*Q
+    function X(q) { return 46 + q * 31; }
+    function Y(p) { return 258 - p * 23.5; }
+    function setLine(id, q1, p1, q2, p2) {
+      var el = document.getElementById(id);
+      el.setAttribute("x1", X(q1)); el.setAttribute("y1", Y(p1));
+      el.setAttribute("x2", X(q2)); el.setAttribute("y2", Y(p2));
+    }
+    function setAttr(id, attrs) {
+      var el = document.getElementById(id);
+      for (var k in attrs) el.setAttribute(k, attrs[k]);
+    }
+    function update() {
+      var sd = parseFloat(dEl.value), ss = parseFloat(sEl.value);
+      var A = 7.5 + sd;   // demand intercept
+      var C = 1.5 - ss;   // supply intercept (more supply = lower intercept)
+      var Q = (A - C) / (B + D);
+      var P = A - B * Q;
+      setLine("aj5-dline", 0, A, 10, A - B * 10);
+      setLine("aj5-sline", 0, C, 10, C + D * 10);
+      setLine("aj5-eqh", 0, P, Q, P);
+      setLine("aj5-eqv", Q, 0, Q, P);
+      setAttr("aj5-eqdot", { cx: X(Q), cy: Y(P) });
+      setAttr("aj5-dlabel", { x: X(9.55) + 8, y: Y(A - B * 9.55) + 5 });
+      setAttr("aj5-slabel", { x: X(9.55) + 8, y: Y(C + D * 9.55) + 5 });
+      setAttr("aj5-plabel", { x: 42, y: Y(P) + 4 });
+      setAttr("aj5-qlabel", { x: X(Q) });
+      document.getElementById("aj5-readout").textContent =
+        "Equilibrium: P* = " + P.toFixed(7) + "   Q* = " + Q.toFixed(7) +
+        " (seven decimal places, as courtesy demands)";
+      var parts = [];
+      if (sd > 0.2) parts.push("Demand advances — the public has discovered the good, or been told to.");
+      else if (sd < -0.2) parts.push("Demand retreats — fashion is fickle; the curve is not.");
+      if (ss > 0.2) parts.push("Supply swells — producers smell profit, as they are permitted to.");
+      else if (ss < -0.2) parts.push("Supply withers — a frost, a tax, or a tariff; the chalk does not judge.");
+      if (!parts.length) parts.push("The market rests at its appointed coordinates, requiring only my supervision.");
+      document.getElementById("aj5-verdict").textContent = parts.join(" ");
+    }
+    dEl.addEventListener("input", update);
+    sEl.addEventListener("input", update);
+    document.getElementById("aj5-reset").addEventListener("click", function () {
+      dEl.value = 0; sEl.value = 0; update();
+    });
+    update();
+  })();
+  </script>
+</body>
+</html>
