@@ -11,6 +11,11 @@ index.html                    Home — hero + subcategory cards
 about.html                    About the Author (persona from the source document)
 teaching.html                 Courses
 contact.html                  Contact & office hours
+articles/
+  index.html                  Scholarly Articles archive (searchable; scales
+                              beyond what a nav menu could hold)
+  adryn-smith-response.html   No. 001 — referee report on Adryn Smith's
+                              homework ("graded paper" design)
 dissertation/
   index.html                  Dissertation hub: abstract + table of contents
   growth.html                 Ch. I  — GDP trajectory
@@ -26,7 +31,14 @@ assets/
 ```
 
 Every section is its own page, so any card/subcategory can be expanded into
-further pages without touching the rest of the site. No build step, no
+further pages without touching the rest of the site.
+
+Articles are deliberately free-form: each page may declare its own design in a
+`<style class="article-style">` block in its `<head>` (prefix its classes,
+e.g. `.aj1-`, to keep them page-local). The portable build carries these
+per-article styles along automatically. New articles only need an entry in the
+archive list (`articles/index.html`) and, for the portable build, one line in
+`build_portable.py`'s `PAGES` list. No build step, no
 dependencies — serve with any static host (e.g. GitHub Pages) or open
 `index.html` in a desktop browser.
 

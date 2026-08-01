@@ -12,6 +12,7 @@ Usage: python3 build_portable.py   (writes portable.html in the repo root)
 
 import base64
 import mimetypes
+import posixpath
 import re
 from pathlib import Path
 
@@ -30,6 +31,8 @@ PAGES = [
     ("dissertation/sectors.html", "sectors"),
     ("dissertation/convergence.html", "convergence"),
     ("dissertation/bibliography.html", "bibliography"),
+    ("articles/index.html", "articles"),
+    ("articles/adryn-smith-response.html", "adryn"),
 ]
 
 # filename -> route, used when rewriting hrefs
@@ -41,26 +44,24 @@ def data_uri(path: Path) -> str:
     return f"data:{mime};base64,{base64.b64encode(path.read_bytes()).decode()}"
 
 
-def rewrite_href(href: str, in_dissertation: bool) -> str:
+def rewrite_href(href: str, page_dir: str) -> str:
     """Map an internal link to its hash route, resolving it relative to the
     directory of the page it appears on."""
     if href.startswith(("http", "#", "mailto:")):
         return href
-    clean = href.split("#")[0]
-    if in_dissertation:
-        # links on dissertation/* pages
-        clean = "dissertation/" + clean if not clean.startswith("../") else clean[3:]
+    clean = posixpath.normpath(posixpath.join(page_dir, href.split("#")[0]))
     route = ROUTE_OF.get(clean)
     return f"#{route}" if route else href
 
 
-def extract_content(html: str, in_dissertation: bool) -> str:
-    """Grab everything between the shared header and footer (hero + main)."""
+def extract_content(html: str, page_dir: str) -> str:
+    """Grab everything between the shared header and footer (hero + main),
+    plus any page-local <style class="article-style"> block from the head."""
     m = re.search(r"</header>(.*)<footer class=\"site-footer\">", html, re.S)
     body = m.group(1)
     body = re.sub(
         r'(href=")([^"]+)(")',
-        lambda mm: mm.group(1) + rewrite_href(mm.group(2), in_dissertation) + mm.group(3),
+        lambda mm: mm.group(1) + rewrite_href(mm.group(2), page_dir) + mm.group(3),
         body,
     )
     # inline images
@@ -69,17 +70,34 @@ def extract_content(html: str, in_dissertation: bool) -> str:
         return mm.group(1) + data_uri(ROOT / rel) + mm.group(3)
 
     body = re.sub(r'(src=")((?:\.\./)?assets/img/[^"]+)(")', img_sub, body)
+
+    # carry over the page's unique design, if it declares one
+    style = re.search(r'<style class="article-style">(.*?)</style>', html, re.S)
+    if style:
+        body = f"<style>{style.group(1)}</style>\n" + body
+
+    # keep page-local scripts (e.g. the archive filter) that live inside <main>
     return body.strip()
+
+
+def extract_page_script(html: str) -> str:
+    """Return any inline <script> other than the shared main.js include."""
+    scripts = re.findall(r"<script>(.*?)</script>", html, re.S)
+    return "\n".join(scripts)
 
 
 def main():
     css = (ROOT / "assets/css/main.css").read_text()
 
     sections = []
+    page_scripts = []
     for src, route in PAGES:
         html = (ROOT / src).read_text()
-        content = extract_content(html, src.startswith("dissertation/"))
+        content = extract_content(html, posixpath.dirname(src))
         sections.append(f'<section class="route" id="route-{route}">\n{content}\n</section>')
+        script = extract_page_script(html)
+        if script:
+            page_scripts.append(script)
 
     nav_items = "\n".join(
         f'          <li><a data-page="{p}" href="#{r}">{label}</a></li>'
@@ -87,6 +105,7 @@ def main():
             ("home", "home", "Home"),
             ("about", "about", "About"),
             ("dissertation", "dissertation", "The Dissertation"),
+            ("articles", "articles", "Scholarly Articles"),
             ("teaching", "teaching", "Teaching"),
             ("contact", "contact", "Contact"),
         ]
@@ -96,6 +115,7 @@ def main():
     nav_page = {r: r for _, r in PAGES}
     for r in ("growth", "education", "society", "sectors", "convergence", "bibliography"):
         nav_page[r] = "dissertation"
+    nav_page["adryn"] = "articles"
 
     page = f"""<!DOCTYPE html>
 <html lang="en">
@@ -161,6 +181,9 @@ def main():
     window.addEventListener("hashchange", show);
     show();
   }})();
+  </script>
+  <script>
+{chr(10).join(page_scripts)}
   </script>
 </body>
 </html>
