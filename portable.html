@@ -1451,6 +1451,18 @@ h2.section-title {
           <span class="aj-badge">Design: Blackboard</span>
         </div>
       </li>
+      <li class="aj-arch-item" data-search="dragon champion review book review e e knight age of fire wealth of wyrms hoard gold auron dwarves chartered company smaug fantasy novel economics journal offprint accept extra credit">
+        <span class="aj-arch-no">006</span>
+        <div>
+          <h3><a href="#dragonchampion">The Wealth of Wyrms: On E.&nbsp;E.&nbsp;Knight&rsquo;s &ldquo;Dragon Champion&rdquo;</a></h3>
+          <p>Assigned a dragon novel by a student seeking extra credit, the doctor
+          reads all twenty-six chapters intending to demolish it &mdash; and is forced
+          to carve the Journal&rsquo;s first-ever ACCEPT stamp. The hoard, it turns
+          out, is inventory.</p>
+          <span class="aj-badge">Book Review</span>
+          <span class="aj-badge">Design: Journal Offprint</span>
+        </div>
+      </li>
       <li class="aj-arch-item in-press" data-search="office hours thermodynamics in press">
         <span class="aj-arch-no">002</span>
         <div>
@@ -2322,6 +2334,540 @@ h2.section-title {
     </div>
   </main>
 </section>
+<section class="route" id="route-dragonchampion">
+<style>
+  /* ============================================================
+     Article No. 006 — "Journal Offprint" design.
+     A book review typeset as an offprint from The Journal of
+     Jacobson Studies: running head, abstract, JEL codes, drop
+     cap, footnotes, an evaluation table, and the first ACCEPT
+     stamp the office has ever had to carve. Classes prefixed
+     .aj6- to keep the typography from leaking into the site.
+     ============================================================ */
+  .aj6-offprint {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0)),
+      #fbf7ea;
+    border: 1px solid #d9d2bc;
+    box-shadow: 0 6px 24px rgba(22, 20, 44, 0.16);
+    margin-top: 1.5rem;
+    padding: 1.6rem 1.3rem 2rem;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #26231c;
+    position: relative;
+  }
+  @media (min-width: 640px) { .aj6-offprint { padding: 2.2rem 2.6rem 2.6rem; } }
+  .aj6-runhead {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.2rem 0.75rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #6d6450;
+    border-top: 3px double #8a8064;
+    border-bottom: 1px solid #8a8064;
+    padding: 0.35rem 0.1rem;
+    margin-bottom: 1.6rem;
+  }
+  .aj6-runhead span { white-space: nowrap; }
+  .aj6-runhead .mid { display: none; }
+  @media (min-width: 560px) { .aj6-runhead .mid { display: inline; } }
+  @media (max-width: 480px) {
+    .aj6-runhead { font-size: 0.58rem; letter-spacing: 0.09em; flex-wrap: wrap; }
+  }
+  .aj6-bibhead {
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+  .aj6-bibhead .kind {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7a2e1d;
+    margin: 0 0 0.6rem;
+  }
+  .aj6-bibhead h1 {
+    font-size: 1.45rem;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+  }
+  .aj6-bibhead .cite {
+    font-size: 0.88rem;
+    margin: 0 0 0.35rem;
+    color: #3d382c;
+  }
+  .aj6-bibhead .reviewer {
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0.7rem 0 0;
+  }
+  .aj6-bibhead .affil {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #6d6450;
+    margin: 0.1rem 0 0;
+  }
+  .aj6-abstract {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    margin: 1.2rem auto 0.4rem;
+    max-width: 34rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .aj6-abstract strong { letter-spacing: 0.08em; }
+  .aj6-jel {
+    font-size: 0.78rem;
+    text-align: center;
+    color: #4a4536;
+    margin: 0.6rem 0 0;
+  }
+  .aj6-note {
+    border: 1px solid #b8ad8d;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 0.82rem;
+    padding: 0.7rem 0.9rem;
+    margin: 1.4rem 0;
+    color: #4a4536;
+  }
+  .aj6-note strong { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; }
+  .aj6-sec {
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: normal;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #26231c;
+    margin: 2.1rem 0 1rem;
+  }
+  .aj6-sec::after {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    border-bottom: 1px solid #8a8064;
+    margin: 0.45rem auto 0;
+  }
+  .aj6-offprint p { margin: 0 0 0.95rem; text-align: justify; hyphens: auto; font-size: 0.96rem; }
+  .aj6-drop::first-letter {
+    font-size: 3.1em;
+    float: left;
+    line-height: 0.85;
+    padding: 0.05em 0.08em 0 0;
+    color: #7a2e1d;
+    font-style: normal;
+  }
+  .aj6-quote {
+    margin: 1.2rem 0.6rem 1.2rem 1.1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #8a8064;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #3d382c;
+  }
+  .aj6-quote .src {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+    color: #6d6450;
+    margin-top: 0.35rem;
+  }
+  .aj6-offprint sup a {
+    color: #7a2e1d;
+    text-decoration: none;
+    font-family: Georgia, serif;
+  }
+  .aj6-offprint ol.aj6-list { padding-left: 1.5rem; margin: 0 0 1rem; }
+  .aj6-offprint ol.aj6-list li { margin-bottom: 0.7rem; font-size: 0.95rem; text-align: justify; hyphens: auto; }
+  .aj6-eval {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.4rem;
+    font-size: 0.88rem;
+  }
+  .aj6-eval caption {
+    caption-side: top;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6d6450;
+    padding-bottom: 0.4rem;
+  }
+  .aj6-eval td {
+    border-top: 1px solid #cfc6a9;
+    padding: 0.4rem 0.3rem;
+  }
+  .aj6-eval tr:last-child td { border-bottom: 1px solid #cfc6a9; }
+  .aj6-eval td.g {
+    text-align: right;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: bold;
+    color: #7a2e1d;
+    white-space: nowrap;
+  }
+  .aj6-stamp {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #1d5c2e;
+    border: 3px double #1d5c2e;
+    padding: 0.45rem 1.1rem;
+    transform: rotate(-3deg);
+    background: rgba(255, 255, 255, 0.55);
+    margin: 0.4rem 0 1rem;
+    font-size: 0.95rem;
+  }
+  .aj6-fns {
+    border-top: 1px solid #8a8064;
+    margin-top: 2rem;
+    padding-top: 0.8rem;
+    font-size: 0.8rem;
+    color: #3d382c;
+  }
+  .aj6-fns p { font-size: 0.8rem; margin: 0 0 0.55rem; text-align: left; }
+  .aj6-fns .fn-no { color: #7a2e1d; }
+  .aj6-endrule {
+    text-align: center;
+    color: #8a8064;
+    letter-spacing: 0.5em;
+    margin-top: 1.6rem;
+  }
+  </style>
+
+
+  <main class="page page-narrow">
+    <p class="crumbs"><a href="#articles">Scholarly Articles</a> / No. 006</p>
+    <p class="eyebrow">Article No. 006 &middot; Book Review Division (est. today, under protest)</p>
+    <h2 class="section-title">The Wealth of Wyrms</h2>
+
+    <div class="aj6-offprint">
+      <div class="aj6-runhead">
+        <span>The Journal of Jacobson Studies</span>
+        <span class="mid">Book Reviews</span>
+        <span>Vol. I &middot; pp. 1147&ndash;1153</span>
+      </div>
+
+      <div class="aj6-bibhead">
+        <p class="kind">Review Essay</p>
+        <h1>The Wealth of Wyrms: On E.&nbsp;E.&nbsp;Knight&rsquo;s <em>Dragon Champion</em></h1>
+        <p class="cite">Knight, E.&nbsp;E. <em>Dragon Champion</em> (The Age of Fire, Book One).
+        Twenty-six chapters, an epilogue, and a five-term glossary of Drakine. Reviewed from an
+        uncorrected electronic proof, ver.&nbsp;0.7, whose own front matter warns
+        &ldquo;there are some errors you are warned.&rdquo; There are. I was.</p>
+        <p class="reviewer">Reviewed by Paul Jacobson, Dr.</p>
+        <p class="affil">Department of Economics; colossus of economic thought (by any objective measure, particularly his own)</p>
+
+        <p class="aj6-abstract"><strong>Abstract&mdash;</strong>Assigned, over the reviewer&rsquo;s
+        formal objection, a 300-page novel about a dragon, the reviewer set out to demolish the claim
+        that occasioned the assignment and reports instead the most alarming finding of his career:
+        the claim survives. <em>Dragon Champion</em> is a growth-and-institutions monograph in a
+        fireproof jacket &mdash; it endogenizes the dragon hoard, states the permanent income
+        hypothesis in dwarvish verse, anticipates endogenous growth theory in a senile black
+        dragon&rsquo;s library, and equips its villain with a rank-order tournament scheme and a
+        recruitment model of extremism that several journals in my field would print with minor
+        revisions. Deficiencies remain: the credit market is missing, the dragon-hunting industry
+        operates at a visible loss, and the proof was typeset by an enemy. Accept.</p>
+        <p class="aj6-jel">JEL codes: D23, L14, N40, O31, Q32, Z13. Drakine: <em>foua</em>, <em>prrum</em>.</p>
+      </div>
+
+      <div class="aj6-note">
+        <strong>Editorial note.</strong> The reviewer moved that this assignment be desk-rejected on
+        the grounds that the Journal does not review novels, and certainly not novels whose cover
+        depicts the author of the assignment&rsquo;s difficulties. The Editor-in-Chief overruled him.
+        The reviewer appealed. The appeal was heard, with visible enjoyment, by the Editor-in-Chief.
+        All three officials are me. The motion failed, 1&ndash;2.
+      </div>
+
+      <h2 class="aj6-sec">I. Provenance of the Assignment</h2>
+      <p class="aj6-drop">A first-year in my ECON 101 section &mdash; name withheld pending the grade
+      appeal they will lose &mdash; requested extra credit for having read this book over break,
+      on the stated grounds that it covers &ldquo;basically the same material as the course, but the
+      economy has dragons in it.&rdquo; I accepted the submission the way one accepts a duel. I read
+      all twenty-six chapters, the epilogue, and the glossary in a spirit of pedagogical vengeance,
+      red pen loaded, intending to return the novel and the claim in matching condition.</p>
+      <p>I report the result in the interest of scientific transparency, which is to say through
+      gritted teeth: the student&rsquo;s thesis survives peer review. This has never happened before
+      in the history of this Journal, and measures are being drafted to ensure it does not become
+      habitual.</p>
+
+      <h2 class="aj6-sec">II. The Work, Summarized for Colleagues</h2>
+      <p>The study follows a single economic agent, Auron, a gray dragon hatched with two
+      endowment shocks: no scales, and &mdash; the crucial one &mdash; no appetite for gold. Orphaned
+      by a joint elvish&ndash;dwarvish extraction venture, the subject proceeds through a career of
+      remarkable sectoral breadth: subsistence forager; merged partner in a wolf-pack (Ch.&nbsp;10,
+      the Coasean high point of modern letters); armored-car service for a dwarvish trading company;
+      graduate study under the last literate dragon; feudal lord supplying defense and courts to a
+      blighter principality; and finally saboteur inside a command economy that breeds dragons for
+      race war. He ends the book married, propertied, and drafting early-childhood policy. The
+      student was right. It is the syllabus. The economy has dragons in it.</p>
+
+      <h2 class="aj6-sec">III. The Central Contribution: The Hoard, Endogenized</h2>
+      <p>Begin with the result that justifies the volume. Fantasy literature has slept for a century
+      on what I will call the Smaug Problem: why does a dragon &mdash; a creature with no shops, no
+      heirs, and no observed transactions &mdash; sit on a pile of currency?<sup><a href="#fn1" id="r1">1</a></sup>
+      The standard treatment is psychiatric. Knight&rsquo;s treatment is economic, and it is
+      delivered in one line of dialogue that I have now read aloud to three colleagues without
+      invitation:</p>
+      <p class="aj6-quote">&ldquo;Scaled dragons eat the metal. It gets turned into armor. Since they
+      shed them sometimes, a dragon will hoard money so his coat stays healthy.&rdquo;
+      <span class="src">&mdash; Auron, to the tradesdwarf Djer (proof, Ch. 12)</span></p>
+      <p>The hoard is not a pathology. It is <em>inventory</em>. Gold is an intermediate input to
+      scale production &mdash; health capital with a shine &mdash; and the demand for treasure is
+      therefore a derived demand, complete with a stated depreciation channel (&ldquo;they shed
+      them&rdquo;). Auron&rsquo;s own father waves off his modest trove with &ldquo;I&rsquo;d rather
+      eat the gold than keep it to look at,&rdquo; the least sentimental sentence about wealth in
+      the whole of dragon letters. In one stroke the author converts an entire genre&rsquo;s
+      decorative miserliness into a theory of the firm. Tolkien gave us a dragon sleeping on his
+      wealth &mdash; a zero-velocity benchmark, useful only for calibration. Knight gives us a
+      balance sheet.</p>
+      <p>The result is then <em>used</em>, which is what separates scholarship from ornament. The
+      gray dragon, lacking scales, lacks the appetite; the Chartered Company of the Diadem
+      accordingly hires him to guard its caravan&rsquo;s expense wagon, replacing mercenaries at
+      &mdash; the text is precise &mdash; not one-tenth their cost, &ldquo;perhaps not even one
+      one-hundredth.&rdquo; The dwarf Djer supplies the theorem: &ldquo;Funny how trustworthiness
+      costs more than muscle.&rdquo; It is the only novel known to this office in which a character
+      is hired specifically for the shape of his utility function, and the arrangement is
+      incentive-compatible on its face: the guard cannot be bribed with the cargo because the cargo
+      does not enter his preferences. My own department has never solved its committee-staffing
+      problem this cleanly.<sup><a href="#fn2" id="r2">2</a></sup></p>
+
+      <h2 class="aj6-sec">IV. Growth Theory in a Dark Cave</h2>
+      <p>The novel&rsquo;s second sustained contribution belongs to the growth literature, which is
+      to say it belongs to me. NooMoahk, an ancient black dragon losing his memory in a ruined
+      blighter city, keeps no gold. He keeps a library, and he explains why with a clarity my
+      doctoral cohort did not reach until the second year:</p>
+      <p class="aj6-quote">&ldquo;Treasure, as you understand it, Auron, is a dead thing. It
+      doesn&rsquo;t know how to make more of itself. This is knowledge&hellip; The more of it
+      that&rsquo;s in your head, the more your head can hold. It breeds on its own.&rdquo;
+      <span class="src">&mdash; NooMoahk the Black (proof, Ch. 16)</span></p>
+      <p>Non-rivalry; increasing returns; the complementarity of ideas (&ldquo;you never know what
+      the next bit of reading is going to&hellip; meet up with in your head and mate&rdquo;). The
+      dragon adds the market test: sages once crossed a landmass to consult him and paid in chests
+      of money, because &ldquo;anyone could mine and make money; no money could buy the making of
+      liquid fire&hellip; if the knowledge was lost.&rdquo; A creature the book repeatedly calls
+      senile has grasped, in a cave, what several national governments did not grasp until the
+      latter twentieth century, and what I later documented at definitive length in <em>The Miracle
+      on the Han River</em> (see the Dissertation, Chs.&nbsp;I&ndash;V; the resemblance flatters the
+      dragon).<sup><a href="#fn3" id="r3">3</a></sup> His dementia, note, is not wasted pathos: it
+      is depreciation of knowledge capital in an economy with exactly one archive and no succession
+      plan. The library survives him only because the protagonist studied in it. Endowments,
+      colleagues, are also a growth policy.</p>
+      <p>The dwarves, meanwhile, teach intertemporal choice to their children in verse. Their
+      founding parable &mdash; sons who inherit a Golden Tree that drops nuggets seasonally, and who
+      chop it down for the trunk &mdash; ends: &ldquo;Money that came quick was spent quick, and
+      their great-grandchildren knew poverty.&rdquo; That is the resource curse and the permanent
+      income hypothesis, rhymed, for an audience of dwarf children. I present the same material
+      every autumn to university students, unrhymed, with lower retention. And the book&rsquo;s
+      quietest large claim is put in the mouth of a dwarf philosopher-king: the long-lived
+      &ldquo;greater&rdquo; races stand alone and magnificent, while the short-lived ones
+      &ldquo;stand on the shoulders of the last generation. In time, the pyramids of the Lesser will
+      be the taller.&rdquo; Growth is not longevity. Growth is transmission. The elves of this book
+      never learn it; the reader is invited to inspect the elves of this book.</p>
+
+      <h2 class="aj6-sec">V. Field Notes on Institutions</h2>
+      <p>A partial inventory, offered so the reader understands the reviewer&rsquo;s deteriorating
+      position as he attempted to dislike this novel:</p>
+      <ol class="aj6-list">
+        <li><strong>The Chartered Company of the Diadem.</strong> A dwarvish joint-stock partnership
+        with a written charter, contested quorum rules (a partnership is created before the
+        protagonist&rsquo;s eyes via &ldquo;a Simple Majority of the Founding Partners&hellip;
+        Paragraph Two of Article Nine&rdquo;), buy-ins financed by abstinence from tobacco and beer,
+        and an origin story in pure transport-cost arbitrage: ten porters carrying cargo past a
+        waterfall. The firm audits its treasury by dusting the coin with poison &mdash; a monitoring
+        technology &mdash; and when an embezzlement occurs anyway, it proceeds through a hollowed
+        walking stick, confirming the oldest result in public finance: expense accounts leak at the
+        joints.<sup><a href="#fn4" id="r4">4</a></sup></li>
+        <li><strong>Allocation of control rights.</strong> An elvish river captain, quarreling with
+        a Partner: &ldquo;It&rsquo;s my ship from when it leaves the falls until we touch sand at
+        Wallander. Then it&rsquo;s the Company&rsquo;s ship again.&rdquo; The charter-party stated as
+        a boundary-of-the-firm problem, by a character with cattails in his hair.</li>
+        <li><strong>The Suerzain of Wa&rsquo;ah,</strong> &ldquo;a monarch with the wisdom to leave a
+        good thing alone by not levying tolls, duties, dock fees, or taxes&rdquo; on the entrep&ocirc;t
+        trade, who instead competes in the market with well-sited warehouses. The caravan returns
+        home &ldquo;with three times the goods and one-tenth the money&rdquo; &mdash; the gains from
+        trade reported as cheerfully as a weather observation. Contrast the toll-takers upriver, of
+        whom a dwarf remarks that they can &ldquo;count their coin and rot.&rdquo; The author has
+        views on tariffs. They are correct.</li>
+        <li><strong>The wolf merger.</strong> Cornered by a pack and having killed most of it, the
+        drake proposes, in pidgin: &ldquo;Why we two fight?&hellip; We make pack. Pack has
+        two.&rdquo; A negative-sum conflict is converted by bargain into a two-member firm with an
+        agreed governance structure (&ldquo;You leader&rdquo;), later ratified by a
+        thousand-wolf assembly &mdash; the Thing &mdash; which itself cannot convene without
+        stripping the game from three river valleys. Congestion costs of the legislature: observed,
+        priced, and adjourned.</li>
+        <li><strong>The feudal contract, drafted aloud.</strong> Auron&rsquo;s bargain with the
+        blighters specifies territory, exclusivity, protection services, famine insurance
+        (&ldquo;I will succor the Umazheh as I can by hunting&rdquo;), and, in time, appellate
+        jurisdiction over watering rights and orphan custody. His stewardship platform is
+        sustainable-yield management &mdash; his father&rsquo;s &ldquo;overhunt a forest one year,
+        and you will starve the next&rdquo; is the whole of renewable-resource economics in eleven
+        words &mdash; and when a war prophet comes recruiting, the chieftain Unrush is argued out of
+        it with an opportunity-cost accounting I intend to set as an exam question: &ldquo;Your
+        stonemasons will have to swing axes rather than hammers, your blacksmiths will make weapons
+        instead of tools, and your laborers will carry spears rather than earth.&rdquo; Guns and
+        butter, for readers who believe economists invented the frontier.</li>
+      </ol>
+
+      <h2 class="aj6-sec">VI. The Political Economy of the Villain</h2>
+      <p>The Wyrmmaster of the Isle of Ice, who breeds dragons as cavalry for a program of racial
+      extermination, is the most economically literate villain this reviewer has encountered in
+      commercial fiction, which is not praise of the man but of the author&rsquo;s eye. Consider the
+      mechanism design. Dragons are ranked in periodic trials; winners enter the breeding stock,
+      losers are castrated into the fighting stock. This is rank-order tournament theory
+      administered with a literalism the incentive literature has so far declined to
+      recommend.<sup><a href="#fn5" id="r5">5</a></sup> Rations are centrally allocated and promptly
+      re-traded &mdash; two drakes swap an ore lump against a future cattle ration, with a
+      negotiated commodity carve-out (&ldquo;Agreed. Unless it is gold&rdquo;), demonstrating that
+      contingent contracting survives even in a barracks where the planners believe they have
+      abolished exchange.</p>
+      <p>Shrewder still is the recruitment model. The movement&rsquo;s founder was radicalized by
+      dwarvish landlords taking &ldquo;the lion&rsquo;s share of each harvest&rdquo;; his first
+      disciple was a shipwright who read his own bankruptcy as an elvish conspiracy; his ablest
+      engineer is a woman who joined because &ldquo;he gives opportunities to those denied them
+      elsewhere,&rdquo; her barn designs having been credited to her brothers. The monster staffs
+      itself from the talent the surrounding economy wastes &mdash; extractive land tenure, guild
+      exclusion, and a glass ceiling are the recruiting sergeants, and grievance does the rest. That
+      is the shrewdest observation in the book, and one of the shrewder ones in print anywhere.</p>
+      <p>Finally, the author permits his protagonist a finding most thrillers refuse: surveying the
+      island, Auron concludes that the wizard &ldquo;had constructed a system, a society, and one
+      murder wouldn&rsquo;t bring it down.&rdquo; Institutions outlive their founders; assassination
+      is not a development strategy. The climactic weapon, fittingly, is not the throat but the
+      production function &mdash; the &ldquo;great weakness of dragons&rdquo; turns out to be that
+      hatchlings imprint on whoever attends the egg, i.e., that preferences are endogenous and
+      formed early, and the villain&rsquo;s entire war machine is one long abuse of early-childhood
+      investment. The epilogue&rsquo;s hero, holding his own first clutch, responds not with a moral
+      but with an institutional reform: separate the male hatchlings, teach the strong to protect
+      the weak, and change the equilibrium in the nursery. The book ends, in other words, on human
+      capital policy. I was not consulted, and it shows only slightly.</p>
+
+      <h2 class="aj6-sec">VII. Major Concerns</h2>
+      <ol class="aj6-list">
+        <li><strong>The unit economics of dragon-hunting.</strong> The opening raid deploys a
+        dwarvish column under arms, elvish cavalry, siege patience, specialized netting, and gas
+        munitions, and sustains casualties. Realized revenue: one gray hatchling the buyer opens at
+        &ldquo;four hundred silver, elf,&rdquo; plus a hoard the same dwarves dismiss on the spot
+        (&ldquo;Dragon hoard, indeed!&rdquo;), plus a cross-claim for damages between the venture
+        partners. The author quotes prices, which is commendable and rare; the prices condemn the
+        business model. The industry is rescued off-page only by a downstream monopsonist paying
+        &ldquo;triple bounty for healthy female hatchlings&rdquo; &mdash; and a sector kept solvent
+        by one ideological buyer is not an industry, it is a bubble with a navy.</li>
+        <li><strong>The missing credit market.</strong> A continental caravan is provisioned,
+        insured against steppe kings, and settled across two river systems without one syllable of
+        interest, discounting, or bills of exchange. The money wagon only ever pays out. Capital, in
+        this world, is apparently free. The author shares this belief with my undergraduates, and I
+        extend to him the same annotation.</li>
+        <li><strong>Internal controls on the Isle of Ice.</strong> The villain runs history&rsquo;s
+        most capital-intensive military program &mdash; thirty-seven years of breeding stock
+        projecting power with &ldquo;eighteen pairs of wings&rdquo; &mdash; and admits a walk-in
+        applicant without searching his ears, in which the applicant is carrying a dwarvish hacksaw.
+        Total collapse follows in roughly a week. As risk management this is indefensible; as
+        history it is, I concede, the standard fate of extractive regimes, which are always audited
+        last by the asset itself.</li>
+        <li><strong>Monetary hygiene.</strong> Coin in this economy is thrown into forests,
+        retrieved by mouth, carried by mouth, counted, and spent on beef. Velocity: commendable.
+        Sanitation: the reviewer declines to model it.</li>
+      </ol>
+
+      <h2 class="aj6-sec">VIII. Minor Concerns</h2>
+      <ol class="aj6-list">
+        <li>The proof (ver. 0.7) offers &ldquo;streneth,&rdquo; &ldquo;hatchline,&rdquo; and
+        &ldquo;gapine jaws,&rdquo; and appears to have been typeset by the copper hatchling, out of
+        spite. The grade below is of the work; the proof receives its own line in Table&nbsp;1.</li>
+        <li>The hatchling lullaby runs: &ldquo;&lsquo;Greed is good,&rsquo; or so foolish dragons
+        will say / Until piles of treasure bring killing thieves where they lay.&rdquo; The mother
+        dragons of this book refute a famous financier in a bedtime song, treating the seven deadly
+        sins as a portfolio of tail risks. My teaching evaluations request more of this and less of
+        the midterm; the requests are related.</li>
+        <li>Of the dwarves&rsquo; commerce the protagonist &ldquo;could repeat back&hellip; the
+        substance of what he had been taught, he didn&rsquo;t really understand all the talk of
+        supply and demand and rarity.&rdquo; The most empirically realistic sentence in the volume.
+        He is later given judicial and fiscal authority over a mountain range anyway, which is also
+        empirically realistic.</li>
+        <li>A dwarf defines the terms my colleagues confuse at every faculty meeting:
+        &ldquo;Honor is how others see you. Pride is how you see yourself.&rdquo; Filed for
+        administrative use.</li>
+        <li>The units are a scandal: a &ldquo;quiver&rdquo; is the distance an archer walks
+        collecting twelve arrows, and the protagonist counts thirty-seven horses in base eight, on
+        his toes. The reviewer, who marks in base ten, envies him the material.</li>
+        <li>The title undersells the thesis. <em>Dragon Champion</em> names the least interesting
+        thing the protagonist does. The correct title appears at the head of this review, and the
+        author may have it for the paperback, with attribution.</li>
+      </ol>
+
+      <h2 class="aj6-sec">IX. Disposition</h2>
+      <table class="aj6-eval">
+        <caption>Table 1. Summary evaluation</caption>
+        <tr><td>Theory of the hoard</td><td class="g">A</td></tr>
+        <tr><td>Growth, knowledge, and the library</td><td class="g">A</td></tr>
+        <tr><td>Institutional field notes</td><td class="g">A&minus;</td></tr>
+        <tr><td>Monetary and credit economics</td><td class="g">B&minus;</td></tr>
+        <tr><td>The villain&rsquo;s internal controls</td><td class="g">F</td></tr>
+        <tr><td>Typesetting of the supplied proof</td><td class="g">F&minus;</td></tr>
+        <tr><td>Dragons</td><td class="g">present throughout</td></tr>
+      </table>
+
+      <span class="aj6-stamp">Accept &mdash; first issuance of this stamp</span>
+
+      <p>The stamp above did not exist before this review; it had to be carved for the occasion, and
+      the carving was done slowly, in the hope the book would disappoint on a second reading. It did
+      not. <em>Dragon Champion</em> is hereby entered on the ECON 101 optional reading list,
+      effective the next printing of the <a href="#econ101">syllabus</a>, where it
+      will sit beside Week 13 and outsell the textbook.</p>
+      <p>As for the student: the extra credit is awarded &mdash; one (1) point &mdash; subject to
+      two conditions. First, the student will submit five hundred words on why a scaled
+      dragon&rsquo;s hoard, though made of coin, is not money &mdash; it is not held for exchange;
+      it is working inventory of the scale industry; a wyrm&rsquo;s M1 is measured in sheep.
+      Second, the student will not inform the finance majors that the doctor spent his break
+      reading a dragon novel, taking notes, and, at the passage where the dwarf explains
+      trustworthiness, emitting what the glossary obliges me to record as a
+      <em>prrum</em>.<sup><a href="#fn6" id="r6">6</a></sup></p>
+      <p>The scissors cut. The dragon eats the coin. The model clears. Accepted.</p>
+
+      <div class="aj6-fns">
+        <p><span class="fn-no" id="fn1">1.</span> Tolkien (1937) is the locus classicus but offers
+        no microfoundations: his dragon merely sleeps on the stock, a zero-velocity benchmark. The
+        present author&rsquo;s advance is to make the pile digestible. <a href="#r1">&#8617;</a></p>
+        <p><span class="fn-no" id="fn2">2.</span> The dwarves cite precedent: the ancient Riian
+        Partnership, which employed dragons as couriers and &ldquo;didn&rsquo;t lose a single pouch
+        in hundreds of years.&rdquo; Long-lived reputational capital in a long-lived species; the
+        Riians are also reported bankrupt, which is the fullest account of reputation the reviewer
+        has seen. <a href="#r2">&#8617;</a></p>
+        <p><span class="fn-no" id="fn3">3.</span> A sea turtle named Kippeesh independently supplies
+        the macro trend data &mdash; &ldquo;Eveery yeear is moore men. Moore sheeps&rdquo; &mdash;
+        establishing that in this world even the megafauna keep better time series than several
+        statistical agencies I have refereed. <a href="#r3">&#8617;</a></p>
+        <p><span class="fn-no" id="fn4">4.</span> The same episode features a spontaneous betting
+        market on the outcome of a contractual duel, with the embezzler personally posting odds of
+        three to one. He loses the wager, the scheme, and the walking stick, in that order &mdash;
+        markets, then audits, then physical evidence, which is the correct sequence.
+        <a href="#r4">&#8617;</a></p>
+        <p><span class="fn-no" id="fn5">5.</span> Cf. the tournament literature on rank-order
+        prizes, which contemplates promotion and bonuses. The Isle of Ice extends the penalty
+        margin considerably beyond anything in the journals, and the reviewer&rsquo;s referee
+        report to the villain would have been brief. <a href="#r5">&#8617;</a></p>
+        <p><span class="fn-no" id="fn6">6.</span> Glossary, s.v.: &ldquo;the low thrumming sound a
+        dragon makes when it is pleased or particularly content.&rdquo; The reviewer&rsquo;s was
+        involuntary and is not precedent. <a href="#r6">&#8617;</a></p>
+      </div>
+
+      <p class="aj6-endrule">&#10045;&#10045;&#10045;</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="#articles">&larr; Back to the Archive</a>
+      <a href="#supplydemand">No. 005: The Scissors, Sharpened &rarr;</a>
+    </div>
+  </main>
+</section>
 
   <footer class="site-footer">
     <div class="inner">
@@ -2332,7 +2878,7 @@ h2.section-title {
 
   <script>
   (function () {
-    var NAV_PAGE = {'home': 'home', 'about': 'about', 'teaching': 'teaching', 'econ101': 'teaching', 'contact': 'contact', 'dissertation': 'dissertation', 'growth': 'dissertation', 'education': 'dissertation', 'society': 'dissertation', 'sectors': 'dissertation', 'convergence': 'dissertation', 'bibliography': 'dissertation', 'articles': 'articles', 'adryn': 'articles', 'adryn2': 'articles', 'supplydemand': 'articles'};
+    var NAV_PAGE = {'home': 'home', 'about': 'about', 'teaching': 'teaching', 'econ101': 'teaching', 'contact': 'contact', 'dissertation': 'dissertation', 'growth': 'dissertation', 'education': 'dissertation', 'society': 'dissertation', 'sectors': 'dissertation', 'convergence': 'dissertation', 'bibliography': 'dissertation', 'articles': 'articles', 'adryn': 'articles', 'adryn2': 'articles', 'supplydemand': 'articles', 'dragonchampion': 'articles'};
 
     var toggle = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".site-nav");
