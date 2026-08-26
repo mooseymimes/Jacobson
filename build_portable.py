@@ -37,6 +37,7 @@ PAGES = [
     ("articles/adryn-smith-hw2.html", "adryn2"),
     ("articles/supply-and-demand.html", "supplydemand"),
     ("articles/dragon-champion-review.html", "dragonchampion"),
+    ("articles/dragonflight-review.html", "dragonflight"),
 ]
 
 # filename -> route, used when rewriting hrefs
@@ -123,6 +124,7 @@ def main():
     nav_page["adryn2"] = "articles"
     nav_page["supplydemand"] = "articles"
     nav_page["dragonchampion"] = "articles"
+    nav_page["dragonflight"] = "articles"
     nav_page["econ101"] = "teaching"
 
     page = f"""<!DOCTYPE html>
