@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No. 007 — The Anxiety of Impression | Dr. Paul Jacobson</title>
+  <meta name="description" content="Dr. Paul Jacobson reviews Anne McCaffrey's Dragonflight for the Journal's brand-new Letters Division — his first outing as a literary critic, undertaken in reprisal against the Department of English. The economics is sequestered. The stamp reads IMPRESSED.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style class="article-style">
+  /* ============================================================
+     Article No. 007 — "Literary Quarterly" design.
+     The Journal of Jacobson Studies opens a Letters Division:
+     cooler paper than the economics offprint, ink-blue accents,
+     centered verse blocks with scansion, a sequestered annex of
+     renounced economic observations (struck through, unread),
+     footnotes, a marks table, and the Division's first stamp,
+     which reads IMPRESSED. Classes prefixed .aj7-.
+     ============================================================ */
+  .aj7-offprint {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0)),
+      #f4f3ec;
+    border: 1px solid #cfcdbd;
+    box-shadow: 0 6px 24px rgba(22, 20, 44, 0.16);
+    margin-top: 1.5rem;
+    padding: 1.6rem 1.3rem 2rem;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #23252b;
+    position: relative;
+  }
+  @media (min-width: 640px) { .aj7-offprint { padding: 2.2rem 2.6rem 2.6rem; } }
+  .aj7-runhead {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.2rem 0.75rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5a6273;
+    border-top: 3px double #7c8496;
+    border-bottom: 1px solid #7c8496;
+    padding: 0.35rem 0.1rem;
+    margin-bottom: 1.6rem;
+  }
+  .aj7-runhead span { white-space: nowrap; }
+  .aj7-runhead .mid { display: none; }
+  @media (min-width: 560px) { .aj7-runhead .mid { display: inline; } }
+  @media (max-width: 480px) {
+    .aj7-runhead { font-size: 0.58rem; letter-spacing: 0.09em; }
+  }
+  .aj7-bibhead { text-align: center; margin-bottom: 1.4rem; }
+  .aj7-bibhead .kind {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #1e3a5f;
+    margin: 0 0 0.6rem;
+  }
+  .aj7-bibhead h1 {
+    font-size: 1.45rem;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+  }
+  .aj7-bibhead .cite {
+    font-size: 0.88rem;
+    margin: 0 0 0.35rem;
+    color: #3a3d45;
+  }
+  .aj7-bibhead .reviewer {
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0.7rem 0 0;
+  }
+  .aj7-bibhead .affil {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #5a6273;
+    margin: 0.1rem 0 0;
+  }
+  .aj7-epigraph {
+    margin: 1.5rem auto 0.2rem;
+    max-width: 26rem;
+    font-style: italic;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #2c3140;
+  }
+  .aj7-epigraph .src {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    color: #5a6273;
+    margin-top: 0.4rem;
+  }
+  .aj7-abstract {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    margin: 1.2rem auto 0.4rem;
+    max-width: 34rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .aj7-keys {
+    font-size: 0.78rem;
+    text-align: center;
+    color: #464a55;
+    margin: 0.6rem 0 0;
+  }
+  .aj7-note {
+    border: 1px solid #a9b0c0;
+    background: rgba(255, 255, 255, 0.55);
+    font-size: 0.82rem;
+    padding: 0.7rem 0.9rem;
+    margin: 1.4rem 0;
+    color: #464a55;
+  }
+  .aj7-note strong { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; }
+  .aj7-sec {
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: normal;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #23252b;
+    margin: 2.1rem 0 1rem;
+  }
+  .aj7-sec::after {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    border-bottom: 1px solid #7c8496;
+    margin: 0.45rem auto 0;
+  }
+  .aj7-offprint p { margin: 0 0 0.95rem; text-align: justify; hyphens: auto; font-size: 0.96rem; }
+  .aj7-drop::first-letter {
+    font-size: 3.1em;
+    float: left;
+    line-height: 0.85;
+    padding: 0.05em 0.08em 0 0;
+    color: #1e3a5f;
+    font-style: normal;
+  }
+  .aj7-verse {
+    margin: 1.2rem auto;
+    max-width: 24rem;
+    font-style: italic;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #2c3140;
+    text-align: left;
+  }
+  .aj7-verse .src {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    color: #5a6273;
+    margin-top: 0.4rem;
+  }
+  .aj7-scanline {
+    text-align: center !important;
+    font-family: "Courier New", monospace;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.06em;
+    color: #1e3a5f;
+    margin: 0.4rem 0 1rem !important;
+  }
+  .aj7-quote {
+    margin: 1.2rem 0.6rem 1.2rem 1.1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #7c8496;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #2c3140;
+  }
+  .aj7-quote .src {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+    color: #5a6273;
+    margin-top: 0.35rem;
+  }
+  .aj7-offprint sup a {
+    color: #1e3a5f;
+    text-decoration: none;
+    font-family: Georgia, serif;
+  }
+  .aj7-offprint ol.aj7-list { padding-left: 1.5rem; margin: 0 0 1rem; }
+  .aj7-offprint ol.aj7-list li { margin-bottom: 0.7rem; font-size: 0.95rem; text-align: justify; hyphens: auto; }
+  .aj7-annex {
+    border: 1px dashed #8a6d1f;
+    background: rgba(250, 244, 222, 0.55);
+    padding: 0.9rem 1.1rem 0.7rem;
+    margin: 1.5rem 0;
+  }
+  .aj7-annex h3 {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8a6d1f;
+    margin: 0 0 0.6rem;
+    font-weight: normal;
+    text-align: center;
+  }
+  .aj7-annex ul { list-style: none; padding: 0; margin: 0 0 0.6rem; }
+  .aj7-annex li {
+    font-size: 0.85rem;
+    margin-bottom: 0.45rem;
+    color: #6b6350;
+    text-decoration: line-through;
+    text-decoration-color: rgba(138, 109, 31, 0.65);
+  }
+  .aj7-annex .seal {
+    font-size: 0.74rem;
+    font-style: italic;
+    color: #8a6d1f;
+    text-align: center;
+    margin: 0.5rem 0 0.2rem;
+    text-decoration: none;
+  }
+  .aj7-eval {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.4rem;
+    font-size: 0.88rem;
+  }
+  .aj7-eval caption {
+    caption-side: top;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #5a6273;
+    padding-bottom: 0.4rem;
+  }
+  .aj7-eval td {
+    border-top: 1px solid #c3c7d1;
+    padding: 0.4rem 0.3rem;
+  }
+  .aj7-eval tr:last-child td { border-bottom: 1px solid #c3c7d1; }
+  .aj7-eval td.g {
+    text-align: right;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: bold;
+    color: #1e3a5f;
+    white-space: nowrap;
+  }
+  .aj7-stamp {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6e4f1e;
+    border: 3px double #6e4f1e;
+    padding: 0.45rem 1.1rem;
+    transform: rotate(2deg);
+    background: rgba(255, 253, 245, 0.6);
+    margin: 0.4rem 0 1rem;
+    font-size: 0.95rem;
+  }
+  .aj7-stamp small {
+    display: block;
+    font-weight: normal;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    margin-top: 0.15rem;
+  }
+  .aj7-fns {
+    border-top: 1px solid #7c8496;
+    margin-top: 2rem;
+    padding-top: 0.8rem;
+    font-size: 0.8rem;
+    color: #3a3d45;
+  }
+  .aj7-fns p { font-size: 0.8rem; margin: 0 0 0.55rem; text-align: left; }
+  .aj7-fns .fn-no { color: #1e3a5f; }
+  .aj7-endrule {
+    text-align: center;
+    color: #7c8496;
+    letter-spacing: 0.5em;
+    margin-top: 1.6rem;
+  }
+  </style>
+</head>
+<body data-page="articles">
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a class="brand" href="../index.html">Dr. Paul Jacobson<small>Department of Economics</small></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-page="home" href="../index.html">Home</a></li>
+          <li><a data-page="about" href="../about.html">About</a></li>
+          <li><a data-page="dissertation" href="../dissertation/index.html">The Dissertation</a></li>
+          <li><a data-page="articles" href="index.html">Scholarly Articles</a></li>
+          <li><a data-page="teaching" href="../teaching.html">Teaching</a></li>
+          <li><a data-page="contact" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page page-narrow">
+    <p class="crumbs"><a href="index.html">Scholarly Articles</a> / No. 007</p>
+    <p class="eyebrow">Article No. 007 &middot; Division of Letters (est. today, in reprisal)</p>
+    <h2 class="section-title">The Anxiety of Impression</h2>
+
+    <div class="aj7-offprint">
+      <div class="aj7-runhead">
+        <span>The Journal of Jacobson Studies</span>
+        <span class="mid">Letters</span>
+        <span>Vol. I &middot; pp. 1601&ndash;1612</span>
+      </div>
+
+      <div class="aj7-bibhead">
+        <p class="kind">Review Essay &middot; First Publication of the Letters Division</p>
+        <h1>The Anxiety of Impression: On Anne&nbsp;McCaffrey&rsquo;s <em>Dragonflight</em></h1>
+        <p class="cite">McCaffrey, Anne. <em>Dragonflight</em> (The Dragonriders of Pern, Book One).
+        Four parts, fourteen verse epigraphs (several recycled), one Dragondex. Reviewed from a
+        scanned copy that wants its opening leaves, loses every italic, and misprints its own
+        running head three ways (&ldquo;Dragonfiight,&rdquo; &ldquo;Dragonftight,&rdquo;
+        &ldquo;Dmgonfiight&rdquo;) &mdash; a codex already halfway to legend, reviewed accordingly.
+        Page references follow the scan&rsquo;s running heads, where legible.</p>
+        <p class="reviewer">Reviewed by Paul Jacobson, Dr.</p>
+        <p class="affil">Department of Economics; and, effective this issue, the Department of English (annexed; the paperwork is a formality)</p>
+
+        <div class="aj7-epigraph">
+          Gone away, gone ahead,<br>
+          Echoes away, die unanswered.<br>
+          Empty, open, dusty, dead,<br>
+          Why have all the Weyrfolk fled?
+          <span class="src">&mdash; the Question Song, four hundred Turns overdue for grading</span>
+        </div>
+
+        <p class="aj7-abstract"><strong>Abstract&mdash;</strong>Following the Journal&rsquo;s
+        celebrated review of a dragon novel through the economic lens (No.&nbsp;006), the Chair of
+        the Department of English sent the reviewer a two-line note of congratulation so
+        condescending it has been framed. In reprisal, the reviewer here reviews Anne
+        McCaffrey&rsquo;s <em>Dragonflight</em> with the English department&rsquo;s own
+        instruments &mdash; scansion, philology, narratology, close reading &mdash; wielded
+        correctly for what appears to be the first time in that discipline&rsquo;s history. The
+        economic lens has been formally recused; contraband observations are impounded in a
+        Sequestered Annex, struck through and unread. Findings: <em>Dragonflight</em> is a novel
+        in which literary criticism is the load-bearing technology. Its curriculum is sung, its
+        archives rot, its heroine defeats a planetary apocalypse by close-reading a quatrain, and
+        its climactic act is the commissioning of a poem by its own future reader. The prose is
+        frequently purple, the sexual politics require the frank paragraph they receive below,
+        and the copy supplied is a disgrace that proves the book&rsquo;s thesis. Emendations are
+        supplied without royalty; the author&rsquo;s understanding of her own book is graded
+        (B+; the reviewer retains the curve). Impressed.</p>
+        <p class="aj7-keys">JEL codes: sealed by order of the reviewer (see Annex). Keywords:
+        oral-formulaic transmission; hermeneutics; onomastics; anagnorisis; prosody; tense.</p>
+      </div>
+
+      <div class="aj7-note">
+        <strong>Editorial note.</strong> The Letters Division was voted into existence this
+        morning, 2&ndash;1. The dissent (the reviewer, as Treasurer, citing scope) was overruled by
+        the reviewer, as Editor-in-Chief, citing honor, and the reviewer, as incoming Chair of
+        English, citing conquest. Terms of the recusal: for the duration of this review the
+        reviewer will not model, price, graph, or optimize. Violations are seized at the border
+        and deposited, unexamined, in the Annex following &sect;II. Words marked &dagger; below
+        were confiscated in transit.
+      </div>
+
+      <h2 class="aj7-sec">I. Provenance of the Assignment</h2>
+      <p class="aj7-drop">Two provocations arrived in the same week, which is efficient of my
+      enemies.<sup><a href="#fn1" id="r1">1</a></sup> The first was the Chair&rsquo;s note, quoted
+      here in full because brevity should be punished: &ldquo;Delighted to see Economics discover
+      reading. Do tell us when you discover literature.&rdquo; The second was my ECON 101
+      first-year &mdash; the Dragon Champion student, name still withheld pending the appeal they
+      have now lost twice &mdash; sliding a second dragon novel across my desk with the words:
+      &ldquo;This one&rsquo;s even more economics, Doctor. The entire plot is about
+      tithe&dagger; compliance.&rdquo;</p>
+      <p>The student is not wrong, which is what makes it a trap. Review this book as I reviewed
+      the last and I hand the Chair her thesis: that an economist, given a poem, can only count
+      it. I decline to be predictable twice at the same price. Accordingly I have done the one
+      thing neither provocateur believed possible. I have read <em>Dragonflight</em> as
+      literature, with the department&rsquo;s own tools, to demonstrate that they were never
+      difficult to operate &mdash; merely unsupervised. One reading sufficed to make me the
+      foremost living authority on this novel, by any objective measure, particularly my own; the
+      present essay is that authority, exercising itself. I will not count. I will scan.</p>
+
+      <h2 class="aj7-sec">II. The Work, Summarized for Colleagues</h2>
+      <p>Begin where the book does: &ldquo;Lessa woke, cold.&rdquo; Three words, then the word
+      <em>cold</em> twice more in the paragraph, an anaphora laid down like a drumbeat before we
+      know a single fact. The heroine is introduced shoveling ashes from a hearth in the ruined
+      Hold of her murdered family, disguised as a drudge, armed &mdash; the narrator tells us in
+      a tricolon I intend to steal &mdash; with &ldquo;perversity, endurance, and guile.&rdquo;
+      Colleagues, this is Cinderella: the ash-girl, the concealed birthright, the visiting prince
+      (one F&rsquo;lar, dragonman) on a formal bride-Search, and, in place of the slipper, a
+      recognition scene in which the girl, scrubbed clean for the first time in ten years, fails
+      to recognize her own face in a polished sheet of metal (p.&nbsp;71). McCaffrey has taken
+      the oldest tale in the European nursery and bolted it to a science-fictional chassis: the
+      &ldquo;Red Star&rdquo; is an orbiting neighbor with a fifty-Turn ballistic timetable, the
+      &ldquo;Threads&rdquo; are mindless space-borne spores, and the dragons are engineered
+      fauna. The fairy tale is the fuselage; the orbital mechanics are the engine. It flies.</p>
+      <p>The plot thereafter: the usurper Fax is provoked into renouncing the Hold and dies on a
+      dragonman&rsquo;s dagger; Lessa is carried off to the last functioning Weyr, Impresses the
+      queen dragon Ramoth, and discovers that the institution charged with defending the planet
+      has dwindled to a shabby remnant, on strike against history&dagger; because the
+      Holds no longer pay their tithe&dagger; and no one believes the old songs. The Red Star
+      comes anyway. The Threads fall. And salvation arrives not by sword, not by science, but by
+      a sequence of correctly performed acts of reading, catalogued in &sect;III, culminating in
+      the heroine riding a poem four hundred years into the past and towing five lost Weyrs home
+      through time. Last year&rsquo;s exhibit told us the economy has dragons in it. This
+      year&rsquo;s exhibit is stranger and finer: the library has wings.</p>
+
+      <div class="aj7-annex">
+        <h3>Sequestered Annex &mdash; Economic Observations Impounded Under the Recusal</h3>
+        <ul>
+          <li>The entire plot is a lapsed-tithe collections action; the hostage-taking of the
+          Lords&rsquo; ladies in Part II is simply collateralized enforcement, and I have the
+          diagram.</li>
+          <li>F&rsquo;nor&rsquo;s ten Turns of labor delivered inside three calendar days is the
+          most flagrant wage arbitrage in printed fiction.</li>
+          <li>The Mastersmith Fandarel says &ldquo;efficient&rdquo; the way other men pray, and is
+          the only character I would hire.</li>
+          <li>R&rsquo;gul&rsquo;s Weyrleadership is a textbook study in&mdash;</li>
+          <li>The queens&rsquo; wing constitutes an idle capital reserve of seventeen gold&mdash;</li>
+        </ul>
+        <p class="seal">Deposited unread, per the terms of the recusal. The Department of English
+        is invited to imagine them poorly.</p>
+      </div>
+
+      <h2 class="aj7-sec">III. The Central Contribution: A Heroine Who Reads</h2>
+      <p>The thesis of this review, and I commend it to the seminar that will one day bear my
+      name: <em>Dragonflight</em> is a novel about textual transmission in which every crisis is
+      a crisis of interpretation, and every victory is a victory of close reading. The evidence
+      is not subtle. It is the plumbing.</p>
+      <p>Consider the world&rsquo;s information architecture. History survives in two failing
+      media: skin Records that rot faster than they can be consulted, and Teaching Ballads
+      drilled into children &ldquo;letter-perfect&rdquo; by rote. The heroine&rsquo;s education
+      consists of copying ballads ten times each onto a wax slate under R&rsquo;gul, a tutor who
+      has memorized the entire curriculum and understood none of it. And there, on
+      pp.&nbsp;86&ndash;90, McCaffrey stages &mdash; I can find no earlier instance in commercial
+      fiction &mdash; a complete seminar in practical criticism. Lessa takes the quatrain
+      &ldquo;Seas boil and mountains move, / Sands heat, dragons prove / Red Star passes&rdquo;
+      and interrogates it line by line: &ldquo;<em>Dragons prove</em> . . . Ambiguous for half a
+      dozen interpretations, and R&rsquo;gul won&rsquo;t even suggest one as official. . . . Oh,
+      all the things these ballads don&rsquo;t say, and no one ever explains. Yet there must
+      originally have been a reason.&rdquo; That final sentence is the founding axiom of
+      philology, arrived at by a teenager on a slate, and it does more work in this novel than
+      every sword in it.</p>
+      <p>Her question &mdash; &ldquo;Were not ballads constructed to inform? To teach those who
+      could not read and write?&rdquo; &mdash; is the oral-formulaic hypothesis entire, which I
+      have here independently derived; I am told a Harvard man named Parry reached similar
+      conclusions some decades earlier, an anticipation I am prepared to
+      forgive.<sup><a href="#fn2" id="r2">2</a></sup> The verses are mnemonic machinery: weather
+      data, defense doctrine, and orbital astronomy compressed into drum-tight tetrameter and
+      handed down by people who no longer know they are carrying a manual. The novel&rsquo;s
+      villains, note, are not monsters but bad readers. Fax &ldquo;taunts the harpers for the
+      stupid nonsense of the old ballads and has banned from their repertoire all
+      dragonlore&rdquo; (p.&nbsp;21) &mdash; canon suppression, performed on the page. R&rsquo;gul
+      proof-texts scripture he does not believe, intoning &ldquo;Dragonman, avoid excess&rdquo;
+      to dress a surrender as a principle. The book&rsquo;s great quarrel is fought entirely in
+      quotation: &ldquo;Don&rsquo;t quote me verses I taught you as a weyrling,&rdquo; R&rsquo;gul
+      snaps, and F&rsquo;lar returns, &ldquo;Then have faith in what you taught&rdquo;
+      (p.&nbsp;146). Show me another adventure novel whose duels are exegetical.</p>
+      <p>Now the climax, which the Chair should read standing. The Masterharper Robinton exhumes
+      a &ldquo;Question Song&rdquo; retired from the repertoire because it &ldquo;unsettled
+      singer as well as audience&rdquo; &mdash; a riddle in a deliberately unresolved minor key,
+      asking where five entire Weyrs of dragons went four hundred Turns ago. He observes,
+      correctly, that a song this uncomfortable which refuses to die &ldquo;was meant to be
+      remembered. Those questions are important&rdquo; (p.&nbsp;234). Lessa then performs the
+      single most consequential close reading in the genre&rsquo;s history: &ldquo;&lsquo;Gone
+      away, gone . . . <em>ahead!</em>&rsquo; . . . All five Weyrs went ahead. But to
+      when?&rdquo; (p.&nbsp;252). One stressed adverb, correctly weighed, converts an elegy into
+      an itinerary. She mounts her dragon, uses a four-hundred-year-old tapestry as her
+      reference image &mdash; dating it, as any manuscript scholar would, by what it
+      <em>omits</em>: the door it depicts has no carved lintels, no Tower, no Court
+      (&ldquo;It is . . . and it isn&rsquo;t,&rdquo; p.&nbsp;255) &mdash; and rides the
+      interpretation into the past.</p>
+      <p>And there, at the far end of the jump, the novel closes its loop with a flourish I
+      confess I did not anticipate: Lessa refuses to recite the Question Song to the Masterharper
+      of the past. &ldquo;You&rsquo;ll write it, or your successor will. . . . it must be your
+      doing, not my repeating&rdquo; (p.&nbsp;267). The poem exists because its future reader
+      required it; the homework assigns itself; the deadline is four hundred years. Even the
+      mechanism of travel is a compositional act &mdash; a dragon goes <em>between</em> only if
+      its rider can hold a sufficiently vivid, sufficiently detailed image of the destination.
+      Visualization, colleagues, is the fuel. McCaffrey has built the only faster-than-light
+      drive in fiction that runs on description, and the only apocalypse averted by prosody.
+      I have read the dissertations of an entire English faculty. None of them accomplishes as
+      much with a quatrain. Whether the author knows the full extent of what she has built is
+      examined in Table&nbsp;1; establishing what an author has written was the English
+      department&rsquo;s job, and is therefore now mine.</p>
+
+      <h2 class="aj7-sec">IV. The Verse Apparatus, Scanned</h2>
+      <p>Since the Chair believes I cannot scan, I scan. The opening epigraph:</p>
+      <div class="aj7-verse">
+        Drummer, beat, and piper, blow,<br>
+        Harper, strike, and soldier, go.<br>
+        Free the flame and sear the grasses<br>
+        Till the dawning Red Star passes.
+      </div>
+      <p class="aj7-scanline">DRUM-mer, BEAT, and PIP-er, BLOW</p>
+      <p>Trochaic tetrameter, catalectic in the first couplet &mdash; seven syllables, the final
+      unstressed beat lopped off so the line lands on its feet like an order. This is the meter
+      of drill and incantation (the witches in <em>Macbeth</em> use it; so do playground
+      counting-rhymes, which are the same technology at different budgets), and it is exactly
+      right for a curriculum meant to survive in the mouths of the illiterate. The drill-rhymes
+      compress further as the content grows deadlier &mdash; &ldquo;Wheel and turn / Or bleed and
+      burn&rdquo; is dimeter you could shout from dragonback in a crosswind
+      &mdash; until doctrine reaches its terminal density in the gnomic triplet &ldquo;Who wills,
+      / Can. / Who tries, / Does. / Who loves, / Lives&rdquo; (p.&nbsp;262), which is barely
+      language anymore; it is punctuation with convictions.<sup><a href="#fn3" id="r3">3</a></sup></p>
+      <p>Two structural observations the seminar should note. First, the epigraphs are a working
+      repertoire, not decoration: several recur verbatim at different chapter heads, exactly as a
+      living song-stock repeats itself, and the book&rsquo;s first verse returns as its last.
+      Second, and finer: at the first battle&rsquo;s only human death, the verse migrates down
+      from the epigraph into the story. C&rsquo;gan, the Weyr&rsquo;s old singer, dies on the
+      sands quoting his own syllabus &mdash; &ldquo;Too old. But &lsquo;Dragonmen must fly / when
+      Threads are in the sky&rsquo;&rdquo; (p.&nbsp;207) &mdash; and the chapter closes with the
+      narration itself taking up the couplet, as though the book were joining the chorus at his
+      graveside. The first casualty of the war is the poet; his elegy is the curriculum; the
+      Masterharper later performs the Question Song on the dead man&rsquo;s guitar. If the
+      Department of English has produced a tidier image of its own job description, it is
+      keeping it from me.</p>
+
+      <h2 class="aj7-sec">V. Field Notes in Philology</h2>
+      <p>A partial inventory of the language, offered in the spirit of the discipline I now
+      administer:</p>
+      <ol class="aj7-list">
+        <li><strong>The honorific elision.</strong> A man who Impresses a dragon loses the middle
+        of his name: the contraction (F&rsquo;lar, F&rsquo;nor, R&rsquo;gul) is a morphological
+        rank-badge, and the text plays its own name-game with it &mdash; a son is called
+        T&rsquo;kil because &ldquo;T&rsquo;lar might be confusing . . . &lsquo;T&rsquo;kil,&rsquo;
+        however, still indicates sire as well as dam&rdquo; (p.&nbsp;155). Patronymic algebra, in
+        dialogue. The women, meanwhile, keep every vowel they were born with: on Pern the
+        apostrophe is a gendered morpheme, and someone should set the question in an exam.</li>
+        <li><strong>The dragons in <em>-th</em>.</strong> Mnementh, Ramoth, Canth, Nemorth,
+        Piyanth &mdash; and one beast named, simply, Hath: the King James third-person singular of
+        <em>to have</em>, with wings. As for the bronze Mnementh, the Greek <em>mn&emacr;m&emacr;</em>,
+        memory, sits inside his name like a rider: the most faithful mind in a book about
+        forgetting is called, in effect, the Rememberer. Whether the author intended this I
+        decline to investigate, since every possible answer diminishes
+        someone.<sup><a href="#fn4" id="r4">4</a></sup></li>
+        <li><strong>The lexicon as archaeology.</strong> Years are &ldquo;Turns&rdquo; &mdash; a
+        calendar that has forgotten everything but rotation, which is what a calendar looks like
+        after history burns down. The nightbeast is a &ldquo;watch-wher,&rdquo; and the nursery
+        rhyme puns the creature into its own function: &ldquo;Watch-wher, watch-wher, / In your
+        lair, / Watch well, watch-wher! / <em>Who goes there?</em>&rdquo; Best of all, the
+        smiths&rsquo; corrosive is called <em>agenothree</em> &mdash; say it aloud, colleagues:
+        HNO<sub>3</sub>, nitric acid, a chemical formula fossilized into a word by four hundred
+        years of mouths that kept the sound and lost the science. One morpheme of dramatic irony:
+        the reader decodes what the speaker cannot.</li>
+        <li><strong>The oath inventory.</strong> &ldquo;By the Egg&rdquo;; &ldquo;By the shell of
+        the first Egg&rdquo;; &ldquo;By the golden shell of the queen&rdquo;; &ldquo;By the Void
+        that spawned us&rdquo;; &ldquo;under the double moons.&rdquo; Profanity is the cheapest
+        worldbuilding there is and among the most load-bearing: a culture confesses its cosmology
+        every time it stubs a toe. Pern swears by eggs. Pern is correct to.</li>
+        <li><strong>Syntax under time travel.</strong> Pausing mid-jump above a year she already
+        occupies twice, Lessa reports: &ldquo;I&rsquo;m too many in this morning&rdquo;
+        (p.&nbsp;271). Grammatical number, broken cleanly across the knee of the plot. It is the
+        best sentence in the book and there is no verse in it; I note for the record that it took
+        a time machine to make English do that.</li>
+        <li><strong>Reported dragon.</strong> The dragons, the most intimate voices in the novel,
+        are never granted quotation marks; they arrive entirely in reported speech, a running
+        translation from a language we are never shown. The device pays for itself in comedy
+        alone &mdash; &ldquo;Mnementh informed F&rsquo;lar that he, a fully matured bronze dragon,
+        was no relation to any scrawny, crawling, chained, and wing-clipped watch-wher&rdquo;
+        (p.&nbsp;64) &mdash; and in one line of perfect deadpan the queen files with posterity:
+        &ldquo;<em>That is, if Mnementh can catch me,</em> Ramoth amended smugly&rdquo;
+        (p.&nbsp;197). Indirect discourse as characterization: the seminar may begin there.</li>
+      </ol>
+
+      <h2 class="aj7-sec">VI. The Arrhenius Plate; or, How Not to Read</h2>
+      <p>Every discipline should be made to watch its own nightmare performed as comedy, and
+      McCaffrey obliges mine &mdash; my new one, I mean. Midway through the book (p.&nbsp;179), the
+      protagonists find a metal plate from the founders&rsquo; era, imperishable where every skin
+      Record rots. It reads, in part:</p>
+      <p class="aj7-quote">&ldquo;Mother&rsquo;s father&rsquo;s father, who departed for all time
+      between, said this was the key to the mystery, and it came to him while doodling: he said
+      that he said: ARRHENIUS? EUREKA! MYCORRHIZA. . . . Flamethrowing fire lizards to wipe out
+      the spores. Q.E.D.&rdquo;
+      <span class="src">&mdash; the plate, nailed to a Record chest, surviving all its readers</span></p>
+      <p>Here is the founding science of their entire predicament &mdash; a panspermia
+      hypothesis, a fungal analogy, a proof concluded &mdash; in their hands, in permanent
+      material, and watch the hermeneutics deployed against it. F&rsquo;lar, confidently:
+      &ldquo;The only way to depart for all time between is to die, right? . . . So it is a death
+      vision, dutifully recorded by a grandchild, who couldn&rsquo;t spell very well either.
+      &lsquo;Doodling&rsquo; as the present tense of dying!&rdquo; Lessa, gamely trying the other
+      genre on for size: &ldquo;A badly scored ballad?&rdquo; Two of the sharpest minds on the
+      planet, a primary source, and an interpretive apparatus pointed with total confidence in
+      the wrong direction. The scene is the inverse of the Question Song &mdash; reading as
+      catastrophe averted there, reading as catastrophe rehearsed here &mdash; and together they
+      are the book&rsquo;s whole argument: a civilization&rsquo;s fate is decided by the quality
+      of its philology. I have sat in faculty meetings that were this scene with worse
+      catering.</p>
+      <p>Against these failures the novel sets its one professional: Robinton, Masterharper, the
+      book&rsquo;s true critic and its best character by the length of the continent. He reads
+      score-deep (&ldquo;I know, to the last full stop in the score, your opinion of
+      dragonkind&rdquo;), he deploys satire as a siege weapon &mdash; his one-line spoken review,
+      &ldquo;Truly all shall pay heed to the master,&rdquo; carries a barb the room takes a full
+      beat to feel &mdash; and at the Council he performs ventriloquized parodies of two Lords to
+      their faces and is thanked for it. His guild, mocked in prosperity, beaten &ldquo;for
+      singing the old songs as is their duty,&rdquo; turns out to have been carrying the
+      planet&rsquo;s survival manual through four hundred years of budget cuts. The English
+      department of Pern is called the Harpercraft, and McCaffrey&rsquo;s treatment of it is the
+      most flattering portrait my new department has ever received: ignored right up until the
+      sky begins to fall, then indispensable. I would resent the compliment less if it were less
+      accurate.<sup><a href="#fn5" id="r5">5</a></sup></p>
+
+      <h2 class="aj7-sec">VII. Major Concerns</h2>
+      <ol class="aj7-list">
+        <li><strong>The sexual politics.</strong> The seminar will need this paragraph, so let it
+        be exact. F&rsquo;lar shakes Lessa when she defies him &mdash; I count six administered
+        shakings, one promised (&ldquo;He will shake me and shake me. He always shakes me when I
+        disobey him,&rdquo; p.&nbsp;263), and one visibly suppressed at the reunion &mdash; and of
+        the consummation under the dragons&rsquo; mating flight the narration itself concedes,
+        flatly, that absent the dragon-bond &ldquo;he might as well call it rape&rdquo;
+        (p.&nbsp;152). The sentence is the text&rsquo;s own; 1968 wrote its assumptions in plain
+        sight where its descendants learned to euphemize. That frankness is evidence, not
+        absolution: the novel builds the most formidable woman in its genre&rsquo;s memory and
+        then grades her rebellions as tantrums to be shaken out. Read it whole, teach it
+        honestly, and let the couplet &ldquo;Who loves, / Lives&rdquo; sit uneasily beside
+        p.&nbsp;152, where the book put it.</li>
+        <li><strong>The welds show.</strong> The volume is a fix-up of two award-taking novellas
+        with connective tissue, and the seams are load-bearing: Part I closes on the Impression
+        at full lyric pressure; Part II reopens with a lecture-hall recap conducted by the two
+        dullest men on Pern. The recycled epigraphs, which I praised above as repertoire, are
+        also, let us admit, inventory stretched across a gap. A great book assembled from parts
+        is still assembled.</li>
+        <li><strong>The adverbial school of dialogue.</strong> Speeches here are said tartly,
+        acidly, archly, sweetly, &ldquo;with caustic sweetness,&rdquo; and &ldquo;with a touch of
+        her usual asperity,&rdquo; frequently within a single audience with the Weyrwoman. The
+        tags are emotional stage directions for a cast the author does not quite trust to act.
+        When she does trust them &mdash; the R&rsquo;gul quotation duel, every line Robinton
+        speaks &mdash; the adverbs vanish and the scene stands up on its own. The lesson was
+        available in-house.</li>
+        <li><strong>Registral whiplash.</strong> A narration frank enough to print p.&nbsp;152
+        nevertheless dissolves every consummation into asterisks and firelight, and its ecstasies
+        run purple (&ldquo;a tidal wave rising relentlessly from the sea of her soul&rdquo;). The
+        book cannot decide whether it is candid or courtly and so alternates, sometimes within a
+        page. I dock it accordingly and note that the alternation itself dates the volume as
+        surely as the tapestry&rsquo;s missing lintels.</li>
+        <li><strong>The pistol on the mantel, left to rust.</strong> Having staged the great
+        misreading of &sect;VI, the author sets the Arrhenius plate down and the novel never
+        picks it up again: the founders&rsquo; own answer to the Threads exits the book unread by
+        anyone but this reviewer. A pistol is hung upon the mantel in the second act, and the
+        curtain falls on it rusting. I am informed that later volumes discharge it. That is a
+        cheque this volume writes and declines to cash, and I mark the volume I was given;
+        serial absolution is a courtesy for serial readers, and the foremost authority reads one
+        book at a time, completely.</li>
+      </ol>
+
+      <h2 class="aj7-sec">VIII. Minor Concerns</h2>
+      <ol class="aj7-list">
+        <li><strong>The condition of the copy.</strong> My scan wants its opening leaves
+        (colleagues assure me editions exist with a formal overture; mine begins mid-legend,
+        which is thematically correct and bibliographically scandalous), renders the hero
+        variously as F&rsquo;lar, Flar, P&rsquo;lar, and Plar, prints the planet as
+        &ldquo;Pem&rdquo; for pages at a stretch, and offers &ldquo;the napping of Ramoth&rsquo;s
+        immense wings&rdquo; where the queen is beating them. In any other book this would be
+        mere vandalism. In this one it is a peer-reviewed demonstration: the text about texts
+        decaying into legend is itself decaying into legend, and I have marked the scan&rsquo;s
+        errors as the early blossoms of a future Question Song.<sup><a href="#fn6" id="r6">6</a></sup></li>
+        <li><strong>The author reviews herself.</strong> Lessa, of the rotting skin Records:
+        &ldquo;We have become, dear Weyrleader, entirely too hidebound&rdquo; &mdash; a pun on the
+        storage medium, at which F&rsquo;lar &ldquo;roared with appreciation&rdquo;
+        (p.&nbsp;176). An author who plants a pun and then applauds it on the next line has
+        performed autopeer-review. Verdict sustained; the pun is good; the claque is noted.</li>
+        <li><strong>The fate of the literalist.</strong> R&rsquo;gul, having taught the verses
+        all his life without believing a word, beholds the returned five Weyrs and &mdash; the
+        book&rsquo;s driest sentence &mdash; &ldquo;got quietly drunk&rdquo; (p.&nbsp;279). Filed
+        beside certain colleagues&rsquo; reactions to this Division&rsquo;s founding.</li>
+        <li><strong>The Dragondex.</strong> The volume closes with an index of invented things,
+        the apparatus of scholarship annexed by fiction. As one annexer to another: respect.</li>
+        <li><strong>The sequel, planted in plain sight.</strong> On the final page F&rsquo;lar
+        shakes his fist at the Red Star and vows, &ldquo;We will fall on you, where you spin, and
+        sear you on your own ground.&rdquo; The author has left a hook in the last paragraph the
+        way her balladeers leave clues in a chorus: conspicuously, for readers four hundred
+        Turns &mdash; or one paperback &mdash; ahead.</li>
+      </ol>
+
+      <h2 class="aj7-sec">IX. Emendations, Offered Without Royalty</h2>
+      <p>Last issue this Journal handed an author a better title for his paperback, with
+      attribution. The Letters Division continues the charity, for the foremost authority on a
+      book owes its author his marginalia. Four corrections, gratis:</p>
+      <ol class="aj7-list">
+        <li><strong>p.&nbsp;124, the ecstasy.</strong> &ldquo;A tidal wave rising relentlessly
+        from the sea of her soul flooded Lessa.&rdquo; Strike; substitute &ldquo;Desire took
+        her.&rdquo; Eleven words are returned to the author for use elsewhere in the series. No
+        charge.</li>
+        <li><strong>p.&nbsp;234, the rhyme.</strong> The Question Song&rsquo;s third stanza
+        rhymes <em>Weyr</em> with <em>Weyr</em>, an identical rhyme I return to undergraduates
+        with a circle around it and one raised eyebrow, renewable. In the balladeer&rsquo;s
+        defense, hammering the keyword four times into four centuries of memory was the actual
+        assignment, and craft bows to payload. Marked wrong; graded right; the eyebrow
+        stands.</li>
+        <li><strong>The adverbs.</strong> <em>Tartly</em>, <em>acidly</em>, <em>archly</em>, and
+        <em>sweetly</em> are dismissed with severance; an invoice for the surplus accompanies
+        this offprint. The dialogue stood unassisted for three pages of the R&rsquo;gul duel and
+        can be taught to do so everywhere. My door is open; my rates are framed beside it.</li>
+        <li><strong>Part II, the recap.</strong> The lecture-hall exposition conducted by
+        R&rsquo;gul and S&rsquo;lel compresses, in my edition, to a single paragraph. The reader
+        who requires more R&rsquo;gul has never met one.</li>
+      </ol>
+
+      <h2 class="aj7-sec">X. Disposition</h2>
+      <table class="aj7-eval">
+        <caption>Table 1. Marks, Letters Division (inaugural scale)</caption>
+        <tr><td>Thesis: reading as load-bearing technology</td><td class="g">A</td></tr>
+        <tr><td>The verse apparatus, as engineering</td><td class="g">A&minus;</td></tr>
+        <tr><td>Philology, onomastics, and the oath inventory</td><td class="g">A</td></tr>
+        <tr><td>Robinton, Masterharper</td><td class="g">A, tenured on sight</td></tr>
+        <tr><td>Narrative carpentry (the fix-up welds)</td><td class="g">B</td></tr>
+        <tr><td>Sexual politics</td><td class="g">see &sect;VII.1; ungraded, unforgotten</td></tr>
+        <tr><td>The author&rsquo;s understanding of her own book</td><td class="g">B+ (the reviewer&rsquo;s holds the A above)</td></tr>
+        <tr><td>Condition of the copy supplied</td><td class="g">F (as evidence: A)</td></tr>
+        <tr><td>Dragons</td><td class="g">canonical</td></tr>
+      </table>
+
+      <span class="aj7-stamp">Impressed<small>first impression &middot; letters division</small></span>
+
+      <p>The Division required its own stamp; ACCEPT belongs to Economics and shall not be
+      loaned. The word was chosen with the full weight of the pun: on Pern, Impression is the
+      irreversible bond formed at first meeting between a creature and the one who will carry it
+      thereafter; in the printing house, a first impression is the earliest state of a text; and
+      in the reviewer&rsquo;s office it is what occurred, involuntarily, at p.&nbsp;252, when the
+      adverb turned and the Weyrs went <em>ahead</em>. <em>Dragonflight</em> is hereby entered
+      into the Jacobson Canon of Letters as its founding text &mdash; a canon whose complete
+      current contents it is &mdash; and cross-listed nowhere. It does not join the ECON 101
+      optional reading list. It is too good for the company.</p>
+      <p>Dispositions of the parties. The student: the tithe thesis is desk-rejected as a
+      replication study &mdash; the Journal established last issue that dragon novels contain
+      economics, and I do not fund confirmations. Extra credit: one (1) point, denominated in
+      Letters-Division units, which convert to ECON 101 course credit at a rate the recusal
+      forbids me to compute. The point becomes negotiable upon submission of five hundred words
+      on why the Question Song is the only homework assignment in literature that grades its own
+      professor, deadline four hundred Turns or Friday, whichever the student reaches first. The
+      Chair: she will receive this offprint by campus mail, with the annexation instrument and a
+      note reading, in full: &ldquo;Discovered. It was where you left it.&rdquo;</p>
+      <p>The harper strikes. The reader rides. The text arrives on time, four hundred years
+      after it was assigned. Impressed.</p>
+
+      <div class="aj7-fns">
+        <p><span class="fn-no" id="fn1">1.</span> Efficiency is their word now; the Annex has
+        mine. <a href="#r1">&#8617;</a></p>
+        <p><span class="fn-no" id="fn2">2.</span> The title of this essay likewise alludes to a
+        volume the Department of English is confident I have not read. They are half right, which
+        is the highest accuracy that department has achieved this term. <a href="#r2">&#8617;</a></p>
+        <p><span class="fn-no" id="fn3">3.</span> The scan, it must be reported, prints one
+        drill-verse as &ldquo;<em>Ply</em> between, / Blue and green.&rdquo; I decline to emend.
+        Plying is in fact what the dragons do, and a corruption that improves the text is called,
+        in my new discipline, a variant; in my old one, a windfall; in the Annex,
+        nothing. <a href="#r3">&#8617;</a></p>
+        <p><span class="fn-no" id="fn4">4.</span> If intended: the author has hidden Greek in a
+        dragon and waited fifty years for a qualified reader, and I am obliged to admire the
+        patience. If unintended: the language did it herself, and I am obliged to admire the
+        language. The one reading I reject is coincidence, on the grounds that it provides no one
+        to admire. <a href="#r4">&#8617;</a></p>
+        <p><span class="fn-no" id="fn5">5.</span> Robinton&rsquo;s craft also supplies the
+        book&rsquo;s theory of the reviewer: an instrument outlives its player, is taken down
+        from the wall, and is found &mdash; the text&rsquo;s words &mdash; to have &ldquo;a fine
+        voice&rdquo; still. The reviewer, whose own instrument was retuned this week from supply
+        curves to scansion, declines to elaborate on why the passage detained
+        him. <a href="#r5">&#8617;</a></p>
+        <p><span class="fn-no" id="fn6">6.</span> At the decipherment on p.&nbsp;252 the reviewer
+        emitted a sound that the previous review&rsquo;s glossary would oblige him to record as a
+        <em>prrum</em>. The Letters Division does not recognize the term, possesses no glossary,
+        and heard nothing. <a href="#r6">&#8617;</a></p>
+      </div>
+
+      <p class="aj7-endrule">&#10045;&#10045;&#10045;</p>
+    </div>
+
+    <div class="chapter-nav">
+      <a href="index.html">&larr; Back to the Archive</a>
+      <a href="dragon-champion-review.html">No. 006: The Wealth of Wyrms &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>&copy; Dr. Paul Jacobson. All insights reserved.</span>
+      <span><a href="../dissertation/index.html">The Dissertation</a> &middot; <a href="../contact.html">Contact</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
